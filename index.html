@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inspire Sports Academy</title>
 
     <!-- FOR BOOTSTRAP -->
     <link
@@ -23,51 +24,59 @@
     <!-- FOR ICONS -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
 
     <!-- STYLES -->
     <link rel="stylesheet" href="styles.css" />
-
-    <title>Inspire Sports Academy</title>
   </head>
   <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
       <div class="container">
-        <a href="#" class="logo image-fluid" src="images/logo/primary-logo.png">
-          <img src="images/logo/primary-logo.png" height="60" width="320" />
+        <a href="#" class="navbar-brand">
+          <img
+            src="images/logo/primary-logo.png"
+            height="60"
+            width="315"
+            alt="Logo"
+          />
         </a>
 
-        <ul class="navbar-nav d-flex gap-5">
-          <li class="nav-item">
-            <a class="nav-link" href="">Facilities</a>
-          </li>
+        <!-- NAVBAR TOGGLER -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <i class="bi bi-menu-button text-light fs-2"></i>
+        </button>
 
-          <li class="nav-item">
-            <a class="nav-link" href="">Academies</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="">Articles</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="">FAQ</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="">About</a>
-          </li>
-
-          <li class="nav-item">
-            <button class="btn btn-outline-dark request-quote" type="button">
-              Request a Quote
-            </button>
-          </li>
-        </ul>
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto d-flex gap-5">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Facilities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Academies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Articles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-outline-light request-quote" type="button">
+                Request a Quote
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
@@ -144,13 +153,13 @@
             </p>
             <div class="benefits">
               <ul>
-                <li><i class="fas fa-check"></i> Professional Coaches</li>
+                <li><i class="bi bi-check-lg"></i> Professional Coaches</li>
                 <li>
-                  <i class="fas fa-check"></i> Comprehensive Sports Program
+                  <i class="bi bi-check-lg"></i> Comprehensive Sports Program
                 </li>
-                <li><i class="fas fa-check"></i> Supportive Environment</li>
+                <li><i class="bi bi-check-lg"></i> Supportive Environment</li>
                 <li>
-                  <i class="fas fa-check"></i> Focus on health and wellness
+                  <i class="bi bi-check-lg"></i> Focus on health and wellness
                 </li>
               </ul>
             </div>
@@ -179,8 +188,8 @@
                 <p>for SEABA U16 tilt.</p>
               </div>
               <div class="card-footer d-flex justify-content-between">
-                <span><i class="fas fa-user"></i>Reynal Magallon</span>
-                <span><i class="fas fa-calendar-alt"></i> July 22, 2023</span>
+                <span><i class="bi bi-person-fill"></i>Reynal Magallon</span>
+                <span><i class="bi bi-calendar-check"></i> July 22, 2023</span>
               </div>
             </a>
           </div>
@@ -192,8 +201,8 @@
                 <p>for SEABA U16 tilt.</p>
               </div>
               <div class="card-footer d-flex justify-content-between">
-                <span><i class="fas fa-user"></i>Reynal Magallon</span>
-                <span><i class="fas fa-calendar-alt"></i> July 22, 2023</span>
+                <span><i class="bi bi-person-fill"></i>Reynal Magallon</span>
+                <span><i class="bi bi-calendar-check"></i> July 22, 2023</span>
               </div>
             </a>
           </div>
@@ -205,8 +214,8 @@
                 <p>for SEABA U16 tilt.</p>
               </div>
               <div class="card-footer d-flex justify-content-between">
-                <span><i class="fas fa-user"></i>Reynal Magallon</span>
-                <span><i class="fas fa-calendar-alt"></i> July 22, 2023</span>
+                <span><i class="bi bi-person-fill"></i>Reynal Magallon</span>
+                <span><i class="bi bi-calendar-check"></i> July 22, 2023</span>
               </div>
             </a>
           </div>
@@ -215,5 +224,11 @@
         <button class="read-more-btn">Read More</button>
       </div>
     </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
