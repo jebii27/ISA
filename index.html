@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Inspire Sports Academy</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- FOR BOOTSTRAP -->
     <link
@@ -29,32 +28,43 @@
 
     <!-- STYLES -->
     <link rel="stylesheet" href="styles.css" />
+
+    <title>Inspire Sports Academy</title>
   </head>
   <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top p-md-3">
       <div class="container">
-        <a href="#" class="navbar-brand">
+        <!-- ISA LOGO -->
+        <a class="navbar-brand" href="#">
           <img
             src="images/logo/primary-logo.png"
             height="60"
-            width="315"
+            width="320"
+            class="img-fluid"
             alt="Logo"
           />
         </a>
 
-        <!-- NAVBAR TOGGLER -->
+        <!-- BURGER FOR MOBILE -->
         <button
-          class="navbar-toggler"
+          class="navbar-toggler custom-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
-          <i class="bi bi-menu-button text-light fs-2"></i>
+          <i class="bi bi-menu-button"></i>
         </button>
 
-        <!-- Navbar Links -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto d-flex gap-5">
+        <!-- NAVBAR TABS -->
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav d-flex align-items-center gap-5">
             <li class="nav-item">
               <a class="nav-link" href="#">Facilities</a>
             </li>
@@ -71,7 +81,7 @@
               <a class="nav-link" href="#">About</a>
             </li>
             <li class="nav-item">
-              <button class="btn btn-outline-light request-quote" type="button">
+              <button class="btn btn-outline-dark request-quote" type="button">
                 Request a Quote
               </button>
             </li>
@@ -80,18 +90,28 @@
       </div>
     </nav>
 
-    <section id="image">
-      <div class="image-color">
-        <h1>INSPIRING CHAMPIONS</h1>
-        <p>
-          From beginners to professionals, we help you push boundaries, break
-          limits, and reach new heights.
-        </p>
+    <!-- TOP/INTRO PAGE -->
+    <section id="image" class="position-relative text-white">
+      <div class="image-overlay d-flex align-items-center">
+        <div class="container-fluid">
+          <div class="row justify-content-center image-text">
+            <div
+              class="col-lg-12 text-center col-md-8 text-center text-md-start px-3 px-md-5"
+            >
+              <h1>INSPIRING CHAMPIONS</h1>
+              <p>
+                From beginners to professionals, we help you push boundaries,
+                break limits, and reach new heights.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- FACILITY PAGE -->
     <section id="facility-tab" class="container">
-      <div class="facility-text">
+      <div class="facility-text text-center">
         <h2>FACILITIES</h2>
         <p>
           From advanced equipment to expertly designed spaces, we provide
@@ -139,10 +159,11 @@
       </div>
     </section>
 
+    <!-- ACADEMY -->
     <section id="academy">
       <div class="container academy-box">
         <div class="row academy-content">
-          <div class="col-lg-6 col-xl-5 academy-text">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-5 academy-text">
             <h2>ACADEMY</h2>
             <h1>Inspiring Athletes, Building Champions</h1>
             <p>
@@ -152,76 +173,107 @@
               facilities, we empower every athlete to excel and succeed.
             </p>
             <div class="benefits">
-              <ul>
-                <li><i class="bi bi-check-lg"></i> Professional Coaches</li>
-                <li>
-                  <i class="bi bi-check-lg"></i> Comprehensive Sports Program
-                </li>
-                <li><i class="bi bi-check-lg"></i> Supportive Environment</li>
-                <li>
-                  <i class="bi bi-check-lg"></i> Focus on health and wellness
-                </li>
-              </ul>
+              <div class="row">
+                <div class="col-md-6">
+                  <ul>
+                    <li><i class="bi bi-check-lg"></i> Professional Coaches</li>
+                    <li>
+                      <i class="bi bi-check-lg"></i> Comprehensive Sports
+                      Program
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <ul>
+                    <li>
+                      <i class="bi bi-check-lg"></i> Supportive Environment
+                    </li>
+                    <li>
+                      <i class="bi bi-check-lg"></i> Focus on health and
+                      wellness
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <button class="btn btn-outline-dark" type="button">
+
+            <button class="btn btn-outline-dark mt-4" type="button">
               Join Our Academy
             </button>
           </div>
 
-          <div class="col-lg-6 col-xl-5 academy-image">
-            <img src="images/academy/image.png" alt="image" />
+          <div
+            class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-5 academy-image"
+          >
+            <img
+              src="images/academy/image.png"
+              alt="Academy Image"
+              class="img-fluid"
+            />
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ARTICLES -->
     <section id="articles">
       <div class="container articles-tab">
         <h2>ARTICLES</h2>
 
-        <div class="row mt-4">
-          <div class="col-md-4">
+        <div class="row mt-4 articles-box">
+          <!-- Column for the first article -->
+          <div class="col-12 col-sm-6 col-md-4">
             <a href="#" class="card text-decoration-none">
-              <img src="INFORMATION/article.jpg" alt="Article Image" />
+              <img
+                src="INFORMATION/article.jpg"
+                alt="Article Image"
+                class="card-img-top"
+              />
               <div class="card-body">
-                <h5 class="card-title">Gilas Youth working double time</h5>
-                <p>for SEABA U16 tilt.</p>
+                <h5>Gilas Youth working double time for SEABA U16 tilt.</h5>
               </div>
               <div class="card-footer d-flex justify-content-between">
-                <span><i class="bi bi-person-fill"></i>Reynal Magallon</span>
+                <span><i class="bi bi-person-fill"></i> Reynal Magallon</span>
                 <span><i class="bi bi-calendar-check"></i> July 22, 2023</span>
               </div>
             </a>
           </div>
-          <div class="col-md-4">
+          <div class="col-12 col-sm-6 col-md-4">
             <a href="#" class="card text-decoration-none">
-              <img src="INFORMATION/article.jpg" alt="Article Image" />
+              <img
+                src="INFORMATION/article.jpg"
+                alt="Article Image"
+                class="card-img-top"
+              />
               <div class="card-body">
-                <h5 class="card-title">Gilas Youth working double time</h5>
-                <p>for SEABA U16 tilt.</p>
+                <h5>Gilas Youth working double time for SEABA U16 tilt.</h5>
               </div>
               <div class="card-footer d-flex justify-content-between">
-                <span><i class="bi bi-person-fill"></i>Reynal Magallon</span>
+                <span><i class="bi bi-person-fill"></i> Reynal Magallon</span>
                 <span><i class="bi bi-calendar-check"></i> July 22, 2023</span>
               </div>
             </a>
           </div>
-          <div class="col-md-4">
+          <div class="col-12 col-sm-6 col-md-4">
             <a href="#" class="card text-decoration-none">
-              <img src="INFORMATION/article.jpg" alt="Article Image" />
+              <img
+                src="INFORMATION/article.jpg"
+                alt="Article Image"
+                class="card-img-top"
+              />
               <div class="card-body">
-                <h5 class="card-title">Gilas Youth working double time</h5>
-                <p>for SEABA U16 tilt.</p>
+                <h5>Gilas Youth working double time for SEABA U16 tilt.</h5>
               </div>
               <div class="card-footer d-flex justify-content-between">
-                <span><i class="bi bi-person-fill"></i>Reynal Magallon</span>
+                <span><i class="bi bi-person-fill"></i> Reynal Magallon</span>
                 <span><i class="bi bi-calendar-check"></i> July 22, 2023</span>
               </div>
             </a>
           </div>
         </div>
-
-        <button class="read-more-btn">Read More</button>
+        <button class="read-more-btn btn btn-outline-dark mt-4">
+          Read More
+        </button>
       </div>
     </section>
 
