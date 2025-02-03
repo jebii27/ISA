@@ -163,6 +163,10 @@ nav {
   background-color: #e2e8f0;
 }
 
+.academy-box {
+  padding-top: 30px;
+}
+
 .academy-text {
   width: 50%;
   margin-top: 100px;
@@ -317,12 +321,12 @@ nav {
 /* ABOUT */
 #about {
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   background-color: #e2e8f0;
 }
 
 .about-box {
-  padding-top: 50px;
+  padding-top: 100px;
 }
 
 .about-image {
