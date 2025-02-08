@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f1f5f9;
+}
+
+/* NAVBAR */
+nav {
+    background-color: #1C2636;
+    border-bottom: 2px solid #64748b;
+    box-shadow: none;
+}
+
+.navbar .nav-item .nav-link {
+    color: #f8f8f2;
+    font-weight: 400;
+}
+
+.nav-item .btn {
+    border: 2px solid #BC943B;
+    color: #f8f8f2;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.nav-item .btn:hover {
+    background-color: #BC943B;
+    transform: scale(1.05);
+}
+
+.navbar-scrolled {
+    background-color: black;
+}
+
+.container .nav-item .nav-link:hover {
+    color: #BC943B;
+}
+
+.custom-toggler {
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 5px;
+}
+
+/* Make the icon match nav-item colors */
+.custom-toggler i {
+    font-size: 1.8rem;
+    /* Adjust size if needed */
+    color: #f8f8f2;
+    /* Change to match your nav-link color */
+    transition: color 0.3s ease-in-out;
+}
+
+/* Change color on hover */
+.custom-toggler:hover i {
+    color: #ffb600;
+    /* Adjust hover color */
+}
+
+.custom-toggler:focus,
+.custom-toggler:active {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* NAVBAR */
+
+#image {
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(/frontends/images/home/bg.png);
+}
+
+.image-overlay {
+    padding: 10rem;
+    width: 100%;
+    height: 40vh;
+    background-color: rgba(0, 62, 124, 0.8);
+}
+
+.image-text h1 {
+    text-align: left;
+    color: #f8f8f2;
+    opacity: 1;
+    font-size: 50px;
+}
+
+.image-text p {
+    color: #f8f8f2;
+    font-size: 18px;
+    font-weight: 300;
+    opacity: 1;
+}
+
+#general-tab-header {
+    width: 100%;
+    height: 45vh;
+    background-color: #003E7C;
+    position: relative;
+    padding-top: 100px;
+}
+
+.general-tab-header-box {
+    display: flex;
+    flex-direction: column;
+    padding-top: 150px;
+}
+
+.general-tab-header-box h1 {
+    font-size: 60px;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 10px;
+}
+
+.general-tab-header-box p {
+    font-size: 18px;
+    color: white;
+}
+
+#faq {
+    width: 100%;
+    height: 100vh;
+}
+
+.sidebar {
+    max-width: 250px;
+}
+
+.sidebar .list-group-item {
+    border: none;
+    cursor: pointer;
+}
+
+.sidebar .list-group-item.active {
+    background-color: #198754 !important;
+    color: white;
+}
+
+.faq-card {
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: white;
+}
+
+.sub-menu {
+    display: none;
+    padding-left: 20px;
+}
+
+
+/* FOOTER */
+.footer {
+    background-color: #1C2636;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-box {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-images img {
+    width: 80%;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.quick-links {
+    width: 15%;
+}
+
+.quick-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.quick-links li a {
+    transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.quick-links li:hover {
+    transform: scale(1.05);
+}
+
+.divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 20px;
+}
+
+/* FOOTER */
