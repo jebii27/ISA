@@ -80,11 +80,9 @@
             <li class="nav-item">
               <a class="nav-link" href="about.html">About</a>
             </li>
-            <li class="nav-item">
-              <button class="btn btn-outline-dark request-quote" type="button">
-                Request a Quote
-              </button>
-            </li>
+            <button class="btn shadow-none quote-btn" type="button">
+              Request a Quote
+            </button>
           </ul>
         </div>
       </div>
@@ -110,8 +108,8 @@
     </section>
 
     <!-- FACILITY PAGE -->
-    <section id="facility-tab" class="container">
-      <div class="facility-text text-center">
+    <section id="facilities">
+      <div class="container mb-5 facility-text text-center">
         <h2>FACILITIES</h2>
         <p>
           From advanced equipment to expertly designed spaces, we provide
@@ -125,12 +123,10 @@
             margin: 0 auto;
           "
         />
-        <button class="btn btn-outline-dark">View More</button>
+        <a href="facilities.html" class="btn shadow-none view-btn">View More</a>
       </div>
-    </section>
 
-    <section id="facilities">
-      <div class="container">
+      <div class="container my-5 pb-5">
         <div class="row justify-content-center facilities-gallery">
           <!-- Image Columns -->
           <div class="col-md-2 col-sm-4 col-6 mt-5 image">
@@ -174,9 +170,9 @@
 
     <!-- ACADEMY -->
     <section id="academy">
-      <div class="container academy-box">
+      <div class="container my-5 academy-box">
         <div class="row academy-content">
-          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-5 academy-text">
+          <div class="col-lg-6 col-md-12 col-sm-12 py-5 academy-text">
             <h2>ACADEMY</h2>
             <h1>Inspiring Athletes, Building Champions</h1>
             <hr
@@ -195,6 +191,7 @@
               greatness. With expert coaching, innovative programs, and top-tier
               facilities, we empower every athlete to excel and succeed.
             </p>
+
             <div class="benefits">
               <div class="row">
                 <div class="col-md-6">
@@ -220,14 +217,12 @@
               </div>
             </div>
 
-            <button class="btn btn-outline-dark mt-4" type="button">
+            <a href="academies.html" class="btn shadow-none mt-4 join-btn">
               Join Our Academy
-            </button>
+            </a>
           </div>
 
-          <div
-            class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-5 academy-image"
-          >
+          <div class="col-lg-6 col-md-12 col-sm-12 academy-image">
             <img
               src="images/academy/image.png"
               alt="Academy Image"
@@ -240,12 +235,11 @@
 
     <!-- ARTICLES -->
     <section id="articles">
-      <div class="container articles-tab">
+      <div class="container my-5 articles-tab">
         <h2>ARTICLES</h2>
 
-        <div class="row mt-4 articles-box">
-          <!-- Column for the first article -->
-          <div class="col-12 col-sm-6 col-md-4">
+        <div class="row articles-box">
+          <div class="col-lg-4 col-md-6 col-sm-12">
             <a href="#" class="card text-decoration-none">
               <img
                 src="images/articles/article.jpg"
@@ -261,7 +255,8 @@
               </div>
             </a>
           </div>
-          <div class="col-12 col-sm-6 col-md-4">
+
+          <div class="col-lg-4 col-md-6 col-sm-12">
             <a href="#" class="card text-decoration-none">
               <img
                 src="images/articles/article.jpg"
@@ -277,7 +272,8 @@
               </div>
             </a>
           </div>
-          <div class="col-12 col-sm-6 col-md-4">
+
+          <div class="col-lg-4 col-md-6 col-sm-12">
             <a href="#" class="card text-decoration-none">
               <img
                 src="images/articles/article.jpg"
@@ -294,24 +290,26 @@
             </a>
           </div>
         </div>
-        <button class="read-more-btn btn btn-outline-dark mt-4">
-          Read More
-        </button>
+
+        <a href="articles.html" class="btn shadow-none mt-4 read-btn"
+          >Read More</a
+        >
       </div>
     </section>
 
     <!-- ABOUT -->
     <section id="about">
-      <div class="container about-box">
+      <div class="container mt-5 py-5 about-box">
         <div class="row about-content">
-          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-5 about-image">
+          <div class="col-lg-6 col-md-12 col-sm-12 about-image">
             <img
               src="images/about/image.png"
               alt="About Us Image"
               class="img-fluid"
             />
           </div>
-          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-5 academy-text">
+
+          <div class="col-lg-6 col-md-12 col-sm-12 py-5 academy-text">
             <h2>ABOUT US</h2>
             <h1>Where Passion Meets Performance</h1>
             <hr
@@ -332,9 +330,9 @@
               and even for the country.
             </p>
 
-            <button class="btn btn-outline-dark mt-4" type="button">
+            <a href="about.html" class="btn shadow-none read-btn mt-4">
               Read More
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -364,11 +362,12 @@
           <div class="col-md-4 mb-4 quick-links">
             <h5 class="fw-bold">Quick Links</h5>
             <ul class="list-unstyled">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Facilities</a></li>
-              <li><a href="#">Academies</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">About</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="facilities.html">Facilities</a></li>
+              <li><a href="academies.html">Academies</a></li>
+              <li><a href="articles.html">Articles</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="about.html">About</a></li>
             </ul>
           </div>
 

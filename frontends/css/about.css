@@ -18,24 +18,23 @@ nav {
 
 .navbar .nav-item .nav-link {
     color: #f8f8f2;
-    font-weight: 400;
+    font-weight: 500;
 }
 
-.nav-item .btn {
+.quote-btn {
+    font-weight: 500;
     border: 2px solid #BC943B;
-    color: #f8f8f2;
+    color: #f1f5f9;
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
+    padding: 10px 20px;
 }
 
-.nav-item .btn:hover {
+.quote-btn:hover {
+    color: #f1f5f9;
     background-color: #BC943B;
     transform: scale(1.05);
-}
-
-.navbar-scrolled {
-    background-color: black;
 }
 
 .container .nav-item .nav-link:hover {
