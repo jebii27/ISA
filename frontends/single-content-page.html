@@ -27,7 +27,7 @@
     />
 
     <!-- STYLES -->
-    <link rel="stylesheet" href="css/content-page.css" />
+    <link rel="stylesheet" href="css/single-content-page.css" />
 
     <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -83,9 +83,13 @@
             <li class="nav-item">
               <a class="nav-link" href="about.html">About</a>
             </li>
-            <button class="btn shadow-none quote-btn" type="button">
+            <a
+              href="quote-page.html"
+              class="btn shadow-none quote-btn"
+              type="button"
+            >
               Request a Quote
-            </button>
+            </a>
           </ul>
         </div>
       </div>
@@ -164,38 +168,6 @@
           </div>
 
           <div class="col-lg-4">
-            <!-- Options -->
-            <div class="options-card mb-4">
-              <h4>Select Your Plan</h4>
-
-              <!-- Rate Selector -->
-              <select id="rateSelector">
-                <option value="" disabled selected>Select a rate</option>
-                <option value="30000">Annual</option>
-                <option value="18000">Semi-Annual</option>
-                <option value="10500">Quarterly</option>
-                <option value="3500">Monthly</option>
-                <option value="650">Day Pass</option>
-              </select>
-
-              <!-- Quantity Input -->
-              <input
-                type="number"
-                id="quantity"
-                min="1"
-                value="1"
-                placeholder="Enter Quantity"
-              />
-
-              <!-- Total Price -->
-              <div class="total-price" id="totalPrice">₱0.00</div>
-
-              <!-- Add to Quote Button -->
-              <button id="addToQuote" class="btn-quote" disabled>
-                Add to Quote
-              </button>
-            </div>
-
             <!-- Pricing -->
             <div class="pricing-card mb-4">
               <h4 class="fw-bold">Offered Rates</h4>
@@ -277,28 +249,6 @@
         </div>
       </div>
     </footer>
-
-    <!-- SELECTING PRICE OPTION -->
-    <script>
-      $(document).ready(function () {
-        function updateTotal() {
-          let selectedPrice = $("#rateSelector").val();
-          let quantity = $("#quantity").val();
-
-          if (selectedPrice && quantity > 0) {
-            let total = parseFloat(selectedPrice) * parseInt(quantity);
-            $("#totalPrice").text(`₱${total.toLocaleString("en-PH")}.00`);
-            $("#addToQuote").prop("disabled", false);
-          } else {
-            $("#totalPrice").text("₱0.00");
-            $("#addToQuote").prop("disabled", true);
-          }
-        }
-
-        $("#rateSelector, #quantity").change(updateTotal);
-        $("#quantity").on("input", updateTotal);
-      });
-    </script>
 
     <!-- CHANGE IMAGE ON CLICK -->
     <script>

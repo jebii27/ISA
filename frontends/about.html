@@ -80,9 +80,13 @@
             <li class="nav-item">
               <a class="nav-link" href="about.html">About</a>
             </li>
-            <button class="btn shadow-none quote-btn" type="button">
+            <a
+              href="quote-page.html"
+              class="btn shadow-none quote-btn"
+              type="button"
+            >
               Request a Quote
-            </button>
+            </a>
           </ul>
         </div>
       </div>
@@ -356,42 +360,6 @@
       </div>
     </section>
 
-    <!-- ABOUT, MISSION, VISION JS -->
-    <script>
-      const tabs = document.querySelectorAll(".tab-btn");
-      const all_content = document.querySelectorAll(".content");
-
-      tabs.forEach((tab, index) => {
-        tab.addEventListener("click", (e) => {
-          tabs.forEach((tab) => {
-            tab.classList.remove("active");
-          });
-          tab.classList.add("active");
-
-          var line = document.querySelector(".line");
-          line.style.width = e.target.offsetWidth + "px";
-          line.style.left = e.target.offsetLeft + "px";
-
-          all_content.forEach((content) => {
-            content.classList.remove("active");
-          });
-          all_content[index].classList.add("active");
-        });
-      });
-    </script>
-
-    <!-- PARTNERSHIPS -->
-    <script>
-      // Auto-slide every 3 seconds
-      let sponsorCarousel = new bootstrap.Carousel(
-        document.getElementById("sponsorCarousel"),
-        {
-          interval: 3000,
-          ride: "carousel",
-        }
-      );
-    </script>
-
     <!--FOOTER-->
     <footer class="footer">
       <div class="container">
@@ -442,6 +410,42 @@
         </div>
       </div>
     </footer>
+
+    <!-- ABOUT, MISSION, VISION JS -->
+    <script>
+      const tabs = document.querySelectorAll(".tab-btn");
+      const all_content = document.querySelectorAll(".content");
+
+      tabs.forEach((tab, index) => {
+        tab.addEventListener("click", (e) => {
+          tabs.forEach((tab) => {
+            tab.classList.remove("active");
+          });
+          tab.classList.add("active");
+
+          var line = document.querySelector(".line");
+          line.style.width = e.target.offsetWidth + "px";
+          line.style.left = e.target.offsetLeft + "px";
+
+          all_content.forEach((content) => {
+            content.classList.remove("active");
+          });
+          all_content[index].classList.add("active");
+        });
+      });
+    </script>
+
+    <!-- PARTNERSHIPS -->
+    <script>
+      // Auto-slide every 3 seconds
+      let sponsorCarousel = new bootstrap.Carousel(
+        document.getElementById("sponsorCarousel"),
+        {
+          interval: 3000,
+          ride: "carousel",
+        }
+      );
+    </script>
 
     <!-- BOOTSTRAP JS -->
     <script

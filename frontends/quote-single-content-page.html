@@ -27,10 +27,14 @@
     />
 
     <!-- STYLES -->
-    <link rel="stylesheet" href="css/faci-acad.css" />
+    <link rel="stylesheet" href="css/quote-single-content-page.css" />
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <title>Inspire Sports Academy</title>
   </head>
+
   <body>
     <!-- NAVIGATION BAR -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top p-md-3">
@@ -80,13 +84,9 @@
             <li class="nav-item">
               <a class="nav-link" href="about.html">About</a>
             </li>
-            <a
-              href="quote-page.html"
-              class="btn shadow-none quote-btn"
-              type="button"
-            >
+            <button class="btn shadow-none quote-btn" type="button">
               Request a Quote
-            </a>
+            </button>
           </ul>
         </div>
       </div>
@@ -98,82 +98,129 @@
         <div class="container">
           <div class="row justify-content-start image-text">
             <div class="col mt-5 py-5">
-              <h1>Academies</h1>
-              <p>Join Us Now!</p>
+              <h1>High Performance Gym</h1>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CONTENTS -->
+    <!-- SINGLE CONTENT PAGE -->
     <section id="contents">
-      <div class="container my-5 py-5 contents-tab">
-        <div class="row g-4">
-          <div class="col-lg-3 col-md-6 col-sm-12">
-            <div class="card">
-              <img
-                src="images/facility/1.jpg"
-                class="card-img-top"
-                alt="Facility 1"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Modern Gym</h5>
-                <p class="card-text">
-                  A state-of-the-art gym with top-tier equipment.
-                </p>
-                <a href="#" class="btn shadow-none btn-custom">View More</a>
+      <div class="container my-5 py-5">
+        <div class="row">
+          <div class="col-lg-8">
+            <img
+              id="mainImage"
+              src="images/facility/3.jpg"
+              alt="Expert Trainer"
+              class="content-image"
+            />
+
+            <div class="row mt-3">
+              <div class="col-3">
+                <img
+                  src="images/facility/3.jpg"
+                  class="thumb-image"
+                  onclick="changeImage(this)"
+                />
               </div>
+
+              <div class="col-3">
+                <img
+                  src="images/facility/3.jpg"
+                  class="thumb-image"
+                  onclick="changeImage(this)"
+                />
+              </div>
+
+              <div class="col-3">
+                <img
+                  src="images/facility/3.jpg"
+                  class="thumb-image"
+                  onclick="changeImage(this)"
+                />
+              </div>
+
+              <div class="col-3">
+                <img
+                  src="images/facility/3.jpg"
+                  class="thumb-image"
+                  onclick="changeImage(this)"
+                />
+              </div>
+            </div>
+
+            <div class="content-container">
+              <h1>High Performance Gym</h1>
+              <p>
+                Train at the High Performance Gym and have the chance to get
+                stronger in a focused environment while enhancing your strength
+                and conditioning with our in-house coaches. Those who want to
+                improve their fitness levels will find everything they need at
+                the High Performance Gym, which has world-class equipment and
+                even a spacious turf area for plyometric exercises.
+              </p>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 col-sm-12">
-            <div class="card">
-              <img
-                src="images/facility/1.jpg"
-                class="card-img-top"
-                alt="Facility 1"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Modern Gym</h5>
-                <p class="card-text">
-                  A state-of-the-art gym with top-tier equipment.
-                </p>
-                <a href="#" class="btn shadow-none btn-custom">View More</a>
-              </div>
-            </div>
-          </div>
+          <div class="col-lg-4">
+            <!-- Options -->
+            <div class="options-card mb-4">
+              <h4>Select Your Plan</h4>
 
-          <div class="col-lg-3 col-md-6 col-sm-12">
-            <div class="card">
-              <img
-                src="images/facility/1.jpg"
-                class="card-img-top"
-                alt="Facility 1"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Modern Gym</h5>
-                <p class="card-text">
-                  A state-of-the-art gym with top-tier equipment.
-                </p>
-                <a href="#" class="btn shadow-none btn-custom">View More</a>
-              </div>
-            </div>
-          </div>
+              <!-- Rate Selector -->
+              <select id="rateSelector">
+                <option value="" disabled selected>Select a rate</option>
+                <option value="30000">Annual</option>
+                <option value="18000">Semi-Annual</option>
+                <option value="10500">Quarterly</option>
+                <option value="3500">Monthly</option>
+                <option value="650">Day Pass</option>
+              </select>
 
-          <div class="col-lg-3 col-md-6 col-sm-12">
-            <div class="card">
-              <img
-                src="images/facility/1.jpg"
-                class="card-img-top"
-                alt="Facility 1"
+              <!-- Quantity Input -->
+              <input
+                type="number"
+                id="quantity"
+                min="1"
+                value="1"
+                placeholder="Enter Quantity"
               />
-              <div class="card-body">
-                <h5 class="card-title">Modern Gym</h5>
-                <p class="card-text">
-                  A state-of-the-art gym with top-tier equipment.
-                </p>
-                <a href="#" class="btn shadow-none btn-custom">View More</a>
+
+              <!-- Total Price -->
+              <div class="total-price" id="totalPrice">₱0.00</div>
+
+              <!-- Add to Quote Button -->
+              <button id="addToQuote" class="btn-quote" disabled>
+                Add to Quote
+              </button>
+            </div>
+
+            <!-- Pricing -->
+            <div class="pricing-card mb-4">
+              <h4>Offered Rates</h4>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  Annual - <strong>$29/month</strong>
+                </li>
+                <li class="list-group-item">
+                  Semi-Annual - <strong>$49/month</strong>
+                </li>
+                <li class="list-group-item">
+                  Monthly - <strong>$79/month</strong>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Follow Our Socials -->
+            <div class="social-card">
+              <h5 class="fw-bold">Follow Our Socials</h5>
+              <div class="follow-socials">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-youtube"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-tiktok"></i></a>
               </div>
             </div>
           </div>
@@ -231,6 +278,40 @@
         </div>
       </div>
     </footer>
+
+    <!-- SELECTING PRICE OPTION -->
+    <script>
+      $(document).ready(function () {
+        function updateTotal() {
+          let selectedPrice = $("#rateSelector").val();
+          let quantity = $("#quantity").val();
+
+          if (selectedPrice && quantity > 0) {
+            let total = parseFloat(selectedPrice) * parseInt(quantity);
+            $("#totalPrice").text(`₱${total.toLocaleString("en-PH")}.00`);
+            $("#addToQuote").prop("disabled", false);
+          } else {
+            $("#totalPrice").text("₱0.00");
+            $("#addToQuote").prop("disabled", true);
+          }
+        }
+
+        $("#rateSelector, #quantity").change(updateTotal);
+        $("#quantity").on("input", updateTotal);
+      });
+    </script>
+
+    <!-- CHANGE IMAGE ON CLICK -->
+    <script>
+      function changeImage(element) {
+        let mainImage = document.getElementById("mainImage");
+        mainImage.style.opacity = "0";
+        setTimeout(() => {
+          mainImage.src = element.src;
+          mainImage.style.opacity = "1";
+        }, 300);
+      }
+    </script>
 
     <!-- BOOTSTRAP JS -->
     <script

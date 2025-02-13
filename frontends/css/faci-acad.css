@@ -6,7 +6,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #f1f5f9;
+  background-color: #e2e8f0;
 }
 
 /* NAVBAR */
@@ -119,14 +119,14 @@ nav {
 
 .general-tab-header-box h1 {
   font-size: 60px;
-  color: white;
+  color: #f1f5f9;
   font-weight: 600;
   letter-spacing: 10px;
 }
 
 .general-tab-header-box p {
   font-size: 18px;
-  color: white;
+  color: #f1f5f9;
 }
 
 /* HEADER */
@@ -217,7 +217,7 @@ nav {
 /* FOOTER */
 .footer {
   background-color: #1C2636;
-  color: white;
+  color: #f1f5f9;
   padding: 40px 0;
 }
 
@@ -238,7 +238,7 @@ nav {
 }
 
 .footer a {
-  color: white;
+  color: #f1f5f9;
   text-decoration: none;
 }
 
@@ -247,7 +247,7 @@ nav {
 }
 
 .social-icons a {
-  color: white;
+  color: #f1f5f9;
   font-size: 20px;
   margin-right: 10px;
 }

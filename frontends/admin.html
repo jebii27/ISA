@@ -27,51 +27,132 @@
     />
 
     <!-- STYLES -->
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/admin.css" />
 
     <title>Inspire Sports Academy</title>
   </head>
   <body>
-    <!-- NAVIGATION BAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top p-md-3">
-      <div class="container">
-        <!-- ISA LOGO -->
-        <a class="navbar-brand" href="index.html">
-          <img
-            src="images/logo/primary-logo.png"
-            height="60"
-            width="320"
-            class="img-fluid"
-            alt="Logo"
-          />
+    <div class="sidebar">
+      <!-- ISA LOGO -->
+      <div class="logo">
+        <img src="images/logo/primary-logo.png" alt="INSPIRE SPORTS ACADEMY" />
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="sidebar-tabs" role="tablist">
+        <a
+          class="nav-link active"
+          id="dashboard-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#dashboard"
+          type="button"
+          role="tab"
+        >
+          <i class="bi bi-bar-chart-line-fill"></i> Dashboard
         </a>
 
-        <!-- BURGER FOR MOBILE -->
-        <button
-          class="navbar-toggler custom-toggler"
+        <a
+          class="nav-link"
+          id="transaction-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#transaction"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          role="tab"
         >
-          <i class="bi bi-menu-button"></i>
-        </button>
+          <i class="bi bi-cash-stack"></i> Transactions
+        </a>
 
-        <!-- NAVBAR TABS -->
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
+        <a
+          class="nav-link"
+          id="home-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#home"
+          type="button"
+          role="tab"
         >
-          <ul class="navbar-nav d-flex align-items-center gap-5">
-            <li class="nav-item">
-              <a class="nav-link" href="facilities.html">Logout</a>
-            </li>
-          </ul>
-        </div>
+          <i class="bi bi-house-door"></i> Home
+        </a>
+
+        <a
+          class="nav-link"
+          id="facilities"
+          data-bs-toggle="tab"
+          data-bs-target="#facilities"
+          type="button"
+          role="tab"
+        >
+          <i class="bi bi-building"></i> Facilities
+        </a>
+
+        <a
+          class="nav-link"
+          id="academies"
+          data-bs-toggle="tab"
+          data-bs-target="#academies"
+          type="button"
+          role="tab"
+        >
+          <i class="bi bi-people"></i> Academies
+        </a>
+
+        <a
+          class="nav-link"
+          id="articles-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#articles"
+          type="button"
+          role="tab"
+        >
+          <i class="bi bi-file-text"></i> Articles
+        </a>
+
+        <a
+          class="nav-link"
+          id="faq-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#faq"
+          type="button"
+          role="tab"
+        >
+          <i class="bi bi-question-circle"></i> FAQ
+        </a>
+
+        <a
+          class="nav-link"
+          id="about-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#about"
+          type="button"
+          role="tab"
+        >
+          <i class="bi bi-info-circle"></i> About
+        </a>
+
+        <a
+          class="nav-link"
+          id="settings-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#settings"
+          type="button"
+          role="tab"
+        >
+          <i class="bi bi-gear"></i> Settings
+        </a>
       </div>
-    </nav>
+
+      <!-- LOGOUT -->
+      <a class="nav-link logout" href="login.html">
+        <i class="bi bi-box-arrow-right"></i> Logout
+      </a>
+    </div>
+
+    <!-- TAB CONTENTS -->
+    <div class="content">
+      <div class="dashboard-tab" id="dashboard">
+        <h2>Welcome, Admin</h2>
+        <p>Manage your website content here.</p>
+      </div>
+    </div>
 
     <!-- BOOTSTRAP JS -->
     <script
