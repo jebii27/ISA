@@ -12,6 +12,9 @@
       crossorigin="anonymous"
     />
 
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="images/logo/logo.png" type="image/x-icon" />
+
     <!-- FOR FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,7 +32,7 @@
     <!-- STYLES -->
     <link rel="stylesheet" href="css/admin.css" />
 
-    <title>Inspire Sports Academy</title>
+    <title>ISA - Admin</title>
   </head>
   <body>
     <div class="sidebar">
@@ -38,104 +41,63 @@
         <img src="images/logo/primary-logo.png" alt="INSPIRE SPORTS ACADEMY" />
       </div>
 
-      <!-- SIDEBAR -->
+      <!-- SIDEBAR TABS -->
       <div class="sidebar-tabs" role="tablist">
+        <!-- Dashboard Tab -->
         <a
           class="nav-link active"
-          id="dashboard-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#dashboard"
-          type="button"
-          role="tab"
+          href=""
+          onclick="showTab(event, 'dashboard')"
         >
           <i class="bi bi-bar-chart-line-fill"></i> Dashboard
         </a>
 
-        <a
-          class="nav-link"
-          id="transaction-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#transaction"
-          type="button"
-          role="tab"
-        >
-          <i class="bi bi-cash-stack"></i> Transactions
+        <!-- Request Tab -->
+        <a class="nav-link" href="#" onclick="showTab(event, 'request')">
+          <i class="bi bi-quote"></i> Requests
         </a>
 
-        <a
-          class="nav-link"
-          id="home-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#home"
-          type="button"
-          role="tab"
-        >
+        <!-- Contact Tab -->
+        <a class="nav-link" href="#" onclick="showTab(event, 'contact')">
+          <i class="bi bi-person-circle"></i> Contacts
+        </a>
+
+        <h6 class="text-center">---------Website Settings---------</h6>
+
+        <!-- Home Tab -->
+        <a class="nav-link" href="#" onclick="showTab(event, 'home')">
           <i class="bi bi-house-door"></i> Home
         </a>
 
-        <a
-          class="nav-link"
-          id="facilities"
-          data-bs-toggle="tab"
-          data-bs-target="#facilities"
-          type="button"
-          role="tab"
-        >
+        <!-- Facilites Tab -->
+        <a class="nav-link" href="#" onclick="showTab(event, 'facilities')">
           <i class="bi bi-building"></i> Facilities
         </a>
 
-        <a
-          class="nav-link"
-          id="academies"
-          data-bs-toggle="tab"
-          data-bs-target="#academies"
-          type="button"
-          role="tab"
-        >
+        <!-- Academies Tab -->
+        <a class="nav-link" href="#" onclick="showTab(event, 'academies')">
           <i class="bi bi-people"></i> Academies
         </a>
 
-        <a
-          class="nav-link"
-          id="articles-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#articles"
-          type="button"
-          role="tab"
-        >
+        <!-- Articles Tab -->
+        <a class="nav-link" href="#" onclick="showTab(event, 'articles')">
           <i class="bi bi-file-text"></i> Articles
         </a>
 
-        <a
-          class="nav-link"
-          id="faq-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#faq"
-          type="button"
-          role="tab"
-        >
+        <!-- FAQ Tab -->
+        <a class="nav-link" href="#" onclick="showTab(event, 'faq')">
           <i class="bi bi-question-circle"></i> FAQ
         </a>
 
-        <a
-          class="nav-link"
-          id="about-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#about"
-          type="button"
-          role="tab"
-        >
+        <!-- About Tab -->
+        <a class="nav-link" href="#" onclick="showTab(event, 'about')">
           <i class="bi bi-info-circle"></i> About
         </a>
 
-        <a
-          class="nav-link"
-          id="settings-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#settings"
-          type="button"
-          role="tab"
-        >
+        <h6 class="text-center">---------Account Settings---------</h6>
+
+        <!-- Settings Tab -->
+        <a class="nav-link" href="#" onclick="showTab(event, 'settings')">
           <i class="bi bi-gear"></i> Settings
         </a>
       </div>
@@ -147,12 +109,758 @@
     </div>
 
     <!-- TAB CONTENTS -->
-    <div class="content">
-      <div class="dashboard-tab" id="dashboard">
-        <h2>Welcome, Admin</h2>
+    <div class="content-container">
+      <!-- Dashboard Content -->
+      <div class="content active" id="dashboard">
+        <h1>Welcome, Admin</h1>
         <p>Manage your website content here.</p>
       </div>
+      <!-- End of Dashboard Content -->
+
+      <!-- Request Content -->
+      <div class="content" id="request">
+        <h1>Requests</h1>
+        <p>Manage user requests here.</p>
+      </div>
+
+      <!-- Contact Content -->
+      <div class="content" id="contact">
+        <h1>Contacts</h1>
+        <p>Manage contacts here.</p>
+      </div>
+
+      <!-- Home Content -->
+      <div class="content" id="home">
+        <h1>Home</h1>
+        <p>Manage homepage content.</p>
+
+        <div class="form-container">
+          <!-- Top Page Section -->
+          <h4>Top Page Section</h4>
+          <form>
+            <div class="form-group">
+              <label for="top-page-headline">Headline:</label>
+              <input
+                type="text"
+                id="top-page-headline"
+                name="top-page"
+                placeholder="Input Here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="top-page-tagline">Tagline:</label>
+              <input
+                type="text"
+                id="top-page-tagline"
+                name="top-page"
+                placeholder="Input Here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="imageUpload">Background Image:</label>
+              <div class="image-preview" id="imagePreview">
+                <span>No image selected</span>
+              </div>
+              <input type="file" id="imageUpload" accept="image/*" />
+            </div>
+            <!-- <button class="save-btn" type="submit">Save Changes</button> -->
+          </form>
+          <!-- Top Page Section -->
+
+          <br />
+
+          <!-- Facility Section -->
+          <h4>Facility Section</h4>
+          <form>
+            <div class="form-group">
+              <label for="facility-title">Title:</label>
+              <input
+                type="text"
+                id="facility-title"
+                name="facility"
+                placeholder="Input Here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="facility-tagline">Tagline:</label>
+              <input
+                type="text"
+                id="facility-tagline"
+                name="facility"
+                placeholder="Input Here"
+              />
+            </div>
+          </form>
+          <!-- Facility Section -->
+
+          <br />
+
+          <!-- Academy Section -->
+          <h4>Academy Section</h4>
+          <form>
+            <div class="form-group">
+              <label for="academy-title">Title:</label>
+              <input
+                type="text"
+                id="academy-title"
+                name="academy"
+                placeholder="Input Here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="academy-headline">Headline:</label>
+              <input
+                type="text"
+                id="academy-headline"
+                name="academy"
+                placeholder="Input Here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="academy-tagline">Tagline:</label>
+              <input
+                type="text"
+                id="academy-tagline"
+                name="academy"
+                placeholder="Input Here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="academy-benefits">Benefits:</label>
+              <div class="benefits-container">
+                <input
+                  type="text"
+                  id="academy-benefits"
+                  name="academy"
+                  placeholder="Input Here"
+                />
+                <input
+                  type="text"
+                  id="academy-benefits"
+                  name="academy"
+                  placeholder="Input Here"
+                />
+                <input
+                  type="text"
+                  id="academy-benefits"
+                  name="academy"
+                  placeholder="Input Here"
+                />
+                <input
+                  type="text"
+                  id="academy-benefits"
+                  name="academy"
+                  placeholder="Input Here"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="imageUpload">Background Image:</label>
+              <div class="image-preview" id="imagePreview">
+                <span>No image selected</span>
+              </div>
+              <input type="file" id="imageUpload" accept="image/*" />
+            </div>
+          </form>
+          <!-- Academy Section -->
+
+          <br />
+
+          <!-- Articles Section -->
+          <h4>Articles Section</h4>
+          <form>
+            <div class="form-group">
+              <label for="article-title">Title:</label>
+              <input
+                type="text"
+                id="article-title"
+                name="article"
+                placeholder="Input Here"
+              />
+            </div>
+          </form>
+          <!-- Academy Section -->
+
+          <br />
+
+          <!-- About Section -->
+          <h4>Academy Section</h4>
+          <form>
+            <div class="form-group">
+              <label for="about-title">Title:</label>
+              <input
+                type="text"
+                id="about-title"
+                name="about"
+                placeholder="Input Here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="about-headline">Headline:</label>
+              <input
+                type="text"
+                id="about-headline"
+                name="about"
+                placeholder="Input Here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="about-tagline">Tagline:</label>
+              <input
+                type="text"
+                id="about-tagline"
+                name="about"
+                placeholder="Input Here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="imageUpload">Background Image:</label>
+              <div class="image-preview" id="imagePreview">
+                <span>No image selected</span>
+              </div>
+              <input type="file" id="imageUpload" accept="image/*" />
+            </div>
+          </form>
+          <!-- About Section -->
+        </div>
+      </div>
+      <!-- Home Content -->
+
+      <!-- Facilities Content -->
+      <div class="content" id="facilities">
+        <h1>Facilities</h1>
+        <p>Manage facilities details.</p>
+
+        <div class="form-container">
+          <!-- Header -->
+          <h4>Facility Header</h4>
+          <form>
+            <div class="form-group">
+              <label for="facility-title">Title:</label>
+              <input
+                type="text"
+                id="facility-title"
+                name="facility"
+                placeholder="Input Here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="facility-tagline">Tagline:</label>
+              <input
+                type="text"
+                id="facility-tagline"
+                name="facility"
+                placeholder="Input Here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="imageUpload">Background Image:</label>
+              <div class="image-preview" id="imagePreview">
+                <span>No image selected</span>
+              </div>
+              <input type="file" id="imageUpload" accept="image/*" />
+            </div>
+            <div class="btn-container">
+              <button class="text-center btn" type="submit">
+                Save Changes
+              </button>
+            </div>
+          </form>
+          <!-- Header -->
+
+          <br />
+
+          <!-- Add Facility -->
+          <h4>Add Facility</h4>
+          <form>
+            <div class="form-group">
+              <label for="facility-name">Facility Name:</label>
+              <input
+                type="text"
+                id="facility-name"
+                name="facility"
+                placeholder="Input Here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="facility-description">Facility Description:</label>
+              <input
+                type="text"
+                id="facility-description"
+                name="facility"
+                placeholder="Input Here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="facility-rate">Facility Rate:</label>
+              <input
+                type="text"
+                id="facility-rate"
+                name="facility"
+                placeholder="Input Here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="imageUpload">Background Image:</label>
+              <div class="image-preview" id="imagePreview">
+                <span>No image selected</span>
+              </div>
+              <input type="file" id="imageUpload" accept="image/*" />
+            </div>
+            <div class="btn-container">
+              <button class="text-center btn" type="submit">
+                Add Facility
+              </button>
+            </div>
+          </form>
+          <!-- Add Facility -->
+
+          <br />
+
+          <!-- Table -->
+          <h4>Facility Table</h4>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Facility Image</th>
+                  <th>Facility Name</th>
+                  <th>Facility Description</th>
+                  <th>Facility Price</th>
+                  <th>Actions</th>
+                  <!-- New column for buttons -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img src="images/facility/1.jpg" alt="Facility 1" />
+                  </td>
+                  <td>Basketball Court</td>
+                  <td>Indoor full-court basketball facility with seating.</td>
+                  <td>$50 per hour</td>
+                  <td>
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- Table -->
+        </div>
+      </div>
+
+      <!-- Academies Content -->
+      <div class="content" id="academies">
+        <h1>Academies</h1>
+        <p>Manage academy details.</p>
+
+        <div class="form-container">
+          <!-- Header -->
+          <h4>Academy Header</h4>
+          <form>
+            <div class="form-group">
+              <label for="academy-title">Title:</label>
+              <input
+                type="text"
+                id="academy-title"
+                name="academy"
+                placeholder="Input Here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="academy-tagline">Tagline:</label>
+              <input
+                type="text"
+                id="academy-tagline"
+                name="academy"
+                placeholder="Input Here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="imageUpload">Background Image:</label>
+              <div class="image-preview" id="imagePreview">
+                <span>No image selected</span>
+              </div>
+              <input type="file" id="imageUpload" accept="image/*" />
+            </div>
+            <div class="btn-container">
+              <button class="text-center btn" type="submit">
+                Save Changes
+              </button>
+            </div>
+          </form>
+          <!-- Header -->
+
+          <br />
+
+          <!-- Add Facility -->
+          <h4>Add Academy</h4>
+          <form>
+            <div class="form-group">
+              <label for="academy-name">Academy Name:</label>
+              <input
+                type="text"
+                id="academy-name"
+                name="academy"
+                placeholder="Input Here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="academy-description">Academy Description:</label>
+              <input
+                type="text"
+                id="academy-description"
+                name="academy"
+                placeholder="Input Here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="academy-rate">Academy Rate:</label>
+              <input
+                type="text"
+                id="academy-rate"
+                name="academy"
+                placeholder="Input Here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="imageUpload">Background Image:</label>
+              <div class="image-preview" id="imagePreview">
+                <span>No image selected</span>
+              </div>
+              <input type="file" id="imageUpload" accept="image/*" />
+            </div>
+            <div class="btn-container">
+              <button class="text-center btn" type="submit">Add Academy</button>
+            </div>
+          </form>
+          <!-- Add Academy -->
+
+          <br />
+
+          <!-- Table -->
+          <h4>Academy Table</h4>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Academy Image</th>
+                  <th>Academy Name</th>
+                  <th>Academy Description</th>
+                  <th>Academy Price</th>
+                  <th>Actions</th>
+                  <!-- New column for buttons -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img src="images/facility/3.jpg" alt="Facility 1" />
+                  </td>
+                  <td>Basketball Academy</td>
+                  <td>Indoor full-court basketball facility with seating.</td>
+                  <td>$50 per hour</td>
+                  <td>
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- Table -->
+        </div>
+      </div>
+
+      <!-- Articles Content -->
+      <div class="content" id="articles">
+        <h1>Articles</h1>
+        <p>Manage articles here.</p>
+      </div>
+
+      <!--FAQ Content -->
+      <div class="content" id="faq">
+        <h1>FAQ</h1>
+        <p>Manage FAQs here.</p>
+      </div>
+
+      <!-- About Content -->
+      <div class="content" id="about">
+        <h1>About</h1>
+        <p>Manage about page content.</p>
+        <div class="form-container">
+          <!-- Header -->
+          <h4>About Header</h4>
+          <form>
+            <div class="form-group">
+              <label for="about-title">Title:</label>
+              <input
+                type="text"
+                id="about-title"
+                name="about"
+                placeholder="Input Here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="about-tagline">Tagline:</label>
+              <input
+                type="text"
+                id="about-tagline"
+                name="about"
+                placeholder="Input Here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="imageUpload">Background Image:</label>
+              <div class="image-preview" id="imagePreview">
+                <span>No image selected</span>
+              </div>
+              <input type="file" id="imageUpload" accept="image/*" />
+            </div>
+            <div class="btn-container">
+              <button class="text-center btn" type="submit">
+                Save Changes
+              </button>
+            </div>
+          </form>
+          <!-- Header -->
+
+          <br />
+
+          <!-- About Section -->
+          <h4>About Section</h4>
+          <form>
+            <div class="form-group">
+              <label for="about-title">Title:</label>
+              <input
+                type="text"
+                id="about-title"
+                name="about"
+                placeholder="Input Here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="about-headline">Headline:</label>
+              <input
+                type="text"
+                id="about-headline"
+                name="about"
+                placeholder="Input Here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="about-about">About:</label>
+              <input
+                type="text"
+                id="about-about"
+                name="about"
+                placeholder="Input Here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="about-contact">Contact:</label>
+              <input
+                type="text"
+                id="about-contact"
+                name="about"
+                placeholder="Input Here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="about-Mission">Mission:</label>
+              <input
+                type="text"
+                id="about-Mission"
+                name="about"
+                placeholder="Input Here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="about-Vision">Vision:</label>
+              <input
+                type="text"
+                id="about-Vision"
+                name="about"
+                placeholder="Input Here"
+              />
+            </div>
+          </form>
+          <!-- Facility Section -->
+
+          <br />
+
+          <!-- Academy Section -->
+          <h4>Academy Section</h4>
+          <form>
+            <div class="form-group">
+              <label for="academy-title">Title:</label>
+              <input
+                type="text"
+                id="academy-title"
+                name="academy"
+                placeholder="Input Here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="academy-headline">Headline:</label>
+              <input
+                type="text"
+                id="academy-headline"
+                name="academy"
+                placeholder="Input Here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="academy-tagline">Tagline:</label>
+              <input
+                type="text"
+                id="academy-tagline"
+                name="academy"
+                placeholder="Input Here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="academy-benefits">Benefits:</label>
+              <div class="benefits-container">
+                <input
+                  type="text"
+                  id="academy-benefits"
+                  name="academy"
+                  placeholder="Input Here"
+                />
+                <input
+                  type="text"
+                  id="academy-benefits"
+                  name="academy"
+                  placeholder="Input Here"
+                />
+                <input
+                  type="text"
+                  id="academy-benefits"
+                  name="academy"
+                  placeholder="Input Here"
+                />
+                <input
+                  type="text"
+                  id="academy-benefits"
+                  name="academy"
+                  placeholder="Input Here"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="imageUpload">Background Image:</label>
+              <div class="image-preview" id="imagePreview">
+                <span>No image selected</span>
+              </div>
+              <input type="file" id="imageUpload" accept="image/*" />
+            </div>
+          </form>
+          <!-- Academy Section -->
+
+          <br />
+
+          <!-- Articles Section -->
+          <h4>Articles Section</h4>
+          <form>
+            <div class="form-group">
+              <label for="article-title">Title:</label>
+              <input
+                type="text"
+                id="article-title"
+                name="article"
+                placeholder="Input Here"
+              />
+            </div>
+          </form>
+          <!-- Academy Section -->
+
+          <br />
+
+          <!-- About Section -->
+          <h4>Academy Section</h4>
+          <form>
+            <div class="form-group">
+              <label for="about-title">Title:</label>
+              <input
+                type="text"
+                id="about-title"
+                name="about"
+                placeholder="Input Here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="about-headline">Headline:</label>
+              <input
+                type="text"
+                id="about-headline"
+                name="about"
+                placeholder="Input Here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="about-tagline">Tagline:</label>
+              <input
+                type="text"
+                id="about-tagline"
+                name="about"
+                placeholder="Input Here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="imageUpload">Background Image:</label>
+              <div class="image-preview" id="imagePreview">
+                <span>No image selected</span>
+              </div>
+              <input type="file" id="imageUpload" accept="image/*" />
+            </div>
+          </form>
+          <!-- About Section -->
+        </div>
+      </div>
+
+      <!-- Settings Content -->
+      <div class="content" id="settings">
+        <h1>Settings</h1>
+        <p>Manage your account settings.</p>
+      </div>
     </div>
+
+    <!-- Image Select -->
+    <script>
+      const imageUpload = document.getElementById("imageUpload");
+      const imagePreview = document.getElementById("imagePreview");
+
+      imageUpload.addEventListener("change", function () {
+        const file = this.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (event) {
+            imagePreview.innerHTML = `<img src="${event.target.result}" alt="Preview Image">`;
+          };
+          reader.readAsDataURL(file);
+        } else {
+          imagePreview.innerHTML = `<span>No image selected</span>`;
+        }
+      });
+    </script>
+
+    <!-- Change Tab on Click -->
+    <script>
+      function showTab(event, tabId) {
+        event.preventDefault();
+        document
+          .querySelectorAll(".content")
+          .forEach((content) => content.classList.remove("active"));
+        document
+          .querySelectorAll(".nav-link")
+          .forEach((link) => link.classList.remove("active"));
+        document.getElementById(tabId).classList.add("active");
+        event.currentTarget.classList.add("active");
+      }
+    </script>
 
     <!-- BOOTSTRAP JS -->
     <script

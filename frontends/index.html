@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- SWIPER -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="images/logo/logo.png" type="image/x-icon" />
+
     <!-- FOR BOOTSTRAP -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -12,7 +21,7 @@
       crossorigin="anonymous"
     />
 
-    <!-- FOR FONTS -->
+    <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,7 +29,7 @@
       rel="stylesheet"
     />
 
-    <!-- FOR ICONS -->
+    <!-- BOOTSTRAP ICONS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
@@ -29,18 +38,21 @@
     <!-- STYLES -->
     <link rel="stylesheet" href="css/styles.css" />
 
-    <title>Inspire Sports Academy</title>
+    <!-- JS -->
+    <script src="js/bootstrap.js"></script>
+    <script src="js/navbar-color-scroll.js"></script>
+    <script src="js/carousel.js" defer></script>
+
+    <title>ISA</title>
   </head>
   <body>
     <!-- NAVIGATION BAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top p-md-3">
+    <nav class="navbar navbar-expand-lg fixed-top p-md-3">
       <div class="container">
         <!-- ISA LOGO -->
         <a class="navbar-brand" href="index.html">
           <img
-            src="images/logo/primary-logo.png"
-            height="60"
-            width="320"
+            src="images/logo/inspire-logo.png"
             class="img-fluid"
             alt="Logo"
           />
@@ -56,7 +68,7 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <i class="bi bi-menu-button"></i>
+          <i class="bi bi-menu-button-wide"></i>
         </button>
 
         <!-- NAVBAR TABS -->
@@ -92,7 +104,7 @@
       </div>
     </nav>
 
-    <!-- TOP/INTRO PAGE -->
+    <!-- HEADER PAGE -->
     <section id="image" class="position-relative text-white">
       <div class="image-overlay d-flex align-items-center">
         <div class="container-fluid">
@@ -110,67 +122,58 @@
         </div>
       </div>
     </section>
+    <!-- END OF HEADER PAGE -->
 
-    <!-- FACILITY PAGE -->
-    <section id="facilities">
-      <div class="container mb-5 facility-text text-center">
+    <!-- FACILITY -->
+    <section id="facility">
+      <div class="container mb-3 facility-text text-center">
+        <!-- HEADING -->
         <h2>FACILITIES</h2>
+        <!-- SUB-HEADING -->
         <p>
           From advanced equipment to expertly designed spaces, we provide
           everything you need to reach peak performance
         </p>
-        <hr
-          style="
-            border: 1px solid #64748b;
-            opacity: 1;
-            width: 30%;
-            margin: 0 auto;
-          "
-        />
+        <!-- VIEW MORE BTN -->
         <a href="facilities.html" class="btn shadow-none view-btn">View More</a>
       </div>
 
-      <div class="container my-5 pb-5">
-        <div class="row justify-content-center facilities-gallery">
-          <!-- Image Columns -->
-          <div class="col-md-2 col-sm-4 col-6 mt-5 image">
-            <img src="images/facility/3.jpg" alt="Image" />
-            <div class="title">Football Pitch</div>
-            <div class="overlay"><span>Hello</span></div>
-          </div>
-          <div class="col-md-2 col-sm-4 col-6 image">
-            <img src="images/facility/3.jpg" alt="Image" />
-            <div class="title">Inspire Dormitel</div>
-            <div class="overlay"><span>Hello</span></div>
-          </div>
-          <div class="col-md-2 col-sm-4 col-6 mt-5 image">
-            <img src="images/facility/3.jpg" alt="Image" />
-            <div class="title">Tennis Court</div>
-            <div class="overlay"><span>Hello</span></div>
-          </div>
-          <div class="col-md-2 col-sm-4 col-6 image">
-            <img src="images/facility/3.jpg" alt="Image" />
-            <div class="title">Hoops Center</div>
-            <div class="overlay"><span>Hello</span></div>
-          </div>
-          <div class="col-md-2 col-sm-4 col-6 mt-5 image">
-            <img src="images/facility/3.jpg" alt="Image" />
-            <div class="title">Multi-Sport Center</div>
-            <div class="overlay"><span>Hello</span></div>
-          </div>
-          <div class="col-md-2 col-sm-4 col-6 image">
-            <img src="images/facility/3.jpg" alt="Image" />
-            <div class="title">Aquatic Center</div>
-            <div class="overlay"><span>Hello</span></div>
-          </div>
-          <div class="col-md-2 col-sm-4 col-6 mt-5 image">
-            <img src="images/facility/3.jpg" alt="Image" />
-            <div class="title">High Performance Gyn</div>
-            <div class="overlay"><span>Hello</span></div>
+      <div class="facility-container">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/facility/3.jpg" />
+              <div class="facility-title">high performance gym</div>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/facility/1.jpg" alt="" />
+              <div class="facility-title">aquatic center</div>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/facility/1.jpg" alt="" />
+              <div class="facility-title">hoops center</div>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/facility/1.jpg" alt="" />
+              <div class="facility-title">multi-purpose court</div>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/facility/1.jpg" alt="" />
+              <div class="facility-title">football pitch</div>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/facility/1.jpg" alt="" />
+              <div class="facility-title">tennis court</div>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/facility/1.jpg" alt="" />
+              <div class="facility-title">Inspire Dormitel</div>
+            </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- END OF FACILITY -->
 
     <!-- ACADEMY -->
     <section id="academy">
@@ -179,16 +182,6 @@
           <div class="col-lg-6 col-md-12 col-sm-12 py-5 academy-text">
             <h2>ACADEMY</h2>
             <h1>Inspiring Athletes, Building Champions</h1>
-            <hr
-              style="
-                border: 1px solid #64748b;
-                opacity: 1;
-                width: 30%;
-                float: left;
-                margin-top: 5px;
-              "
-            />
-            <br />
             <p>
               At Inspire Sports Academy, we go beyond training – we’re a
               community dedicated to unlocking potential and achieving
@@ -200,21 +193,25 @@
               <div class="row">
                 <div class="col-md-6">
                   <ul>
-                    <li><i class="bi bi-check-lg"></i> Professional Coaches</li>
                     <li>
-                      <i class="bi bi-check-lg"></i> Comprehensive Sports
-                      Program
+                      <i class="bi bi-check-lg"></i>
+                      Professional Coaches
+                    </li>
+                    <li>
+                      <i class="bi bi-check-lg"></i>
+                      Comprehensive Sports Program
                     </li>
                   </ul>
                 </div>
                 <div class="col-md-6">
                   <ul>
                     <li>
-                      <i class="bi bi-check-lg"></i> Supportive Environment
+                      <i class="bi bi-check-lg"></i>
+                      Supportive Environment
                     </li>
                     <li>
-                      <i class="bi bi-check-lg"></i> Focus on health and
-                      wellness
+                      <i class="bi bi-check-lg"></i>
+                      Focus on health and wellness
                     </li>
                   </ul>
                 </div>
@@ -236,6 +233,7 @@
         </div>
       </div>
     </section>
+    <!-- END OF ACADEMY -->
 
     <!-- ARTICLES -->
     <section id="articles">
@@ -247,8 +245,14 @@
             <a class="news-card">
               <img src="images/articles/article.jpg" alt="Gilas Youth Team" />
               <div class="meta-info">
-                <span><i class="bi bi-person"></i> Reynald Magallon</span>
-                <span><i class="bi bi-calendar"></i> July 22, 2023</span>
+                <span>
+                  <i class="bi bi-person"></i>
+                  Reynald Magallon
+                </span>
+                <span>
+                  <i class="bi bi-calendar"></i>
+                  July 22, 2023
+                </span>
               </div>
               <p class="news-title">
                 Gilas Youth working double time for SEABA U16 tilt.
@@ -260,8 +264,14 @@
             <a class="news-card">
               <img src="images/articles/article.jpg" alt="Gilas Youth Team" />
               <div class="meta-info">
-                <span><i class="bi bi-person"></i> Reynald Magallon</span>
-                <span><i class="bi bi-calendar"></i> July 22, 2023</span>
+                <span>
+                  <i class="bi bi-person"></i>
+                  Reynald Magallon
+                </span>
+                <span>
+                  <i class="bi bi-calendar"></i>
+                  July 22, 2023
+                </span>
               </div>
               <p class="news-title">
                 Gilas Youth working double time for SEABA U16 tilt.
@@ -273,8 +283,14 @@
             <a class="news-card">
               <img src="images/articles/article.jpg" alt="Gilas Youth Team" />
               <div class="meta-info">
-                <span><i class="bi bi-person"></i> Reynald Magallon</span>
-                <span><i class="bi bi-calendar"></i> July 22, 2023</span>
+                <span>
+                  <i class="bi bi-person"></i>
+                  Reynald Magallon
+                </span>
+                <span>
+                  <i class="bi bi-calendar"></i>
+                  July 22, 2023
+                </span>
               </div>
               <p class="news-title">
                 Gilas Youth working double time for SEABA U16 tilt.
@@ -282,11 +298,12 @@
             </a>
           </div>
         </div>
-        <a href="articles.html" class="btn shadow-none mt-4 read-btn"
-          >Read More</a
-        >
+        <a href="articles.html" class="btn shadow-none mt-4 read-btn">
+          Read More
+        </a>
       </div>
     </section>
+    <!-- END OF ARTICLES -->
 
     <!-- ABOUT -->
     <section id="about">
@@ -328,6 +345,41 @@
         </div>
       </div>
     </section>
+    <!-- END OF ABOUT -->
+
+    <!-- CONTACT US -->
+    <section id="contact">
+      <div class="mb-5 container-fluid">
+        <div class="row">
+          <div class="col-lg-6 form-container">
+            <h1 class="sub-title">Contact Us</h1>
+            <form>
+              <div class="input-group">
+                <input type="text" placeholder="First Name" required />
+                <input type="text" placeholder="Last Name" required />
+              </div>
+              <div class="input-group">
+                <input type="email" placeholder="Your Email" required />
+                <input type="tel" placeholder="Your Phone" required />
+              </div>
+              <div class="message-group">
+                <textarea placeholder="Message" required></textarea>
+              </div>
+              <button class="submit-btn" type="submit">Submit</button>
+            </form>
+          </div>
+
+          <div class="col-lg-6 contact-image">
+            <img
+              src="images/contact-bg.png"
+              alt="Academy Image"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END OF CONTACT US -->
 
     <!--FOOTER-->
     <footer class="footer">
@@ -336,16 +388,25 @@
           <!-- Logo and Social Media -->
           <div class="col-md-4 mb-4 footer-images">
             <img
-              src="images/logo/primary-logo.png"
+              src="images/logo/inspire-logo.png"
               alt="Inspire Sports Academy"
               width="180"
             />
             <!-- Replace with actual logo -->
             <div class="social-icons mt-3">
-              <a href="#"><i class="bi bi-facebook"></i></a>
-              <a href="#"><i class="bi bi-youtube"></i></a>
-              <a href="#"><i class="bi bi-instagram"></i></a>
-              <a href="#"><i class="bi bi-tiktok"></i></a>
+              <a href="https://www.facebook.com/isacademyph">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/isacademyph?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              >
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a
+                href="https://www.tiktok.com/@isacademyph?is_from_webapp=1&sender_device=pc"
+              >
+                <i class="bi bi-tiktok"></i>
+              </a>
             </div>
           </div>
 
@@ -375,16 +436,16 @@
 
         <div class="divider"></div>
         <div class="text-center mt-3">
-          <p>© 2025, <a href="#">Inspire Sports Academy</a></p>
+          <p>
+            © 2025,
+            <a href="#image">Inspire Sports Academy</a>
+          </p>
         </div>
       </div>
     </footer>
+    <!-- END OF FOOTER -->
 
-    <!-- BOOTSTRAP JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/swiper-index.js"></script>
   </body>
 </html>

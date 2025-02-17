@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     />
 
-    <!-- FOR FONTS -->
+    <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,7 +20,10 @@
       rel="stylesheet"
     />
 
-    <!-- FOR ICONS -->
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="images/logo/logo.png" type="image/x-icon" />
+
+    <!-- BOOTSTRAP ICONS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
@@ -29,18 +32,20 @@
     <!-- STYLES -->
     <link rel="stylesheet" href="css/faci-acad.css" />
 
-    <title>Inspire Sports Academy</title>
+    <!-- JS -->
+    <script src="js/bootstrap.js"></script>
+    <script src="js/navbar-color-scroll.js"></script>
+
+    <title>Academies - ISA</title>
   </head>
   <body>
     <!-- NAVIGATION BAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top p-md-3">
+    <nav class="navbar navbar-expand-lg fixed-top p-md-3">
       <div class="container">
         <!-- ISA LOGO -->
         <a class="navbar-brand" href="index.html">
           <img
-            src="images/logo/primary-logo.png"
-            height="60"
-            width="320"
+            src="images/logo/inspire-logo.png"
             class="img-fluid"
             alt="Logo"
           />
@@ -56,7 +61,7 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <i class="bi bi-menu-button"></i>
+          <i class="bi bi-menu-button-wide"></i>
         </button>
 
         <!-- NAVBAR TABS -->
@@ -91,25 +96,35 @@
         </div>
       </div>
     </nav>
+    <!-- END OF NAVIGATION BAR -->
 
     <!-- HEADER -->
     <section id="image" class="position-relative text-white">
-      <div class="image-overlay">
-        <div class="container">
-          <div class="row justify-content-start image-text">
-            <div class="col mt-5 py-5">
-              <h1>Academies</h1>
-              <p>Join Us Now!</p>
+      <div class="bg-image">
+        <div class="image-overlay">
+          <div class="container">
+            <div class="row justify-content-start image-text">
+              <div class="col-lg-12">
+                <h1>Academies</h1>
+                <p>This is a template text</p>
+                <a href="index.html"
+                  ><button class="btn shadow-none back-btn">
+                    <i class="bi bi-arrow-left"></i> Go Back
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- END OF HEADER -->
 
     <!-- CONTENTS -->
     <section id="contents">
-      <div class="container my-5 py-5 contents-tab">
+      <div class="container py-5 mb-5 contents-tab">
         <div class="row g-4">
+          <!-- CONTENT CARDS -->
           <div class="col-lg-3 col-md-6 col-sm-12">
             <div class="card">
               <img
@@ -118,68 +133,54 @@
                 alt="Facility 1"
               />
               <div class="card-body">
-                <h5 class="card-title">Modern Gym</h5>
-                <p class="card-text">
-                  A state-of-the-art gym with top-tier equipment.
-                </p>
-                <a href="#" class="btn shadow-none btn-custom">View More</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12">
-            <div class="card">
-              <img
-                src="images/facility/1.jpg"
-                class="card-img-top"
-                alt="Facility 1"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Modern Gym</h5>
-                <p class="card-text">
-                  A state-of-the-art gym with top-tier equipment.
-                </p>
-                <a href="#" class="btn shadow-none btn-custom">View More</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12">
-            <div class="card">
-              <img
-                src="images/facility/1.jpg"
-                class="card-img-top"
-                alt="Facility 1"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Modern Gym</h5>
-                <p class="card-text">
-                  A state-of-the-art gym with top-tier equipment.
-                </p>
-                <a href="#" class="btn shadow-none btn-custom">View More</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 col-sm-12">
-            <div class="card">
-              <img
-                src="images/facility/1.jpg"
-                class="card-img-top"
-                alt="Facility 1"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Modern Gym</h5>
-                <p class="card-text">
-                  A state-of-the-art gym with top-tier equipment.
-                </p>
-                <a href="#" class="btn shadow-none btn-custom">View More</a>
+                <h5 class="card-title">Basketball Academy</h5>
+                <p class="card-text">This is a description template, hehehe</p>
+                <a
+                  href="single-content-page.html"
+                  class="btn shadow-none btn-custom"
+                  >View More</a
+                >
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- END OF CONTENTS -->
+
+    <!-- CONTACT US -->
+    <section id="contact">
+      <div class="mb-5 container-fluid">
+        <div class="row">
+          <div class="col-lg-6 form-container">
+            <h1 class="sub-title">Contact Us</h1>
+            <form>
+              <div class="input-group">
+                <input type="text" placeholder="First Name" required />
+                <input type="text" placeholder="Last Name" required />
+              </div>
+              <div class="input-group">
+                <input type="email" placeholder="Your Email" required />
+                <input type="tel" placeholder="Your Phone" required />
+              </div>
+              <div class="message-group">
+                <textarea placeholder="Message" required></textarea>
+              </div>
+              <button class="submit-btn" type="submit">Submit</button>
+            </form>
+          </div>
+
+          <div class="col-lg-6 contact-image">
+            <img
+              src="images/contact-bg.png"
+              alt="Academy Image"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END OF CONTACT US -->
 
     <!--FOOTER-->
     <footer class="footer">
@@ -188,16 +189,25 @@
           <!-- Logo and Social Media -->
           <div class="col-md-4 mb-4 footer-images">
             <img
-              src="images/logo/primary-logo.png"
+              src="images/logo/inspire-logo.png"
               alt="Inspire Sports Academy"
               width="180"
             />
             <!-- Replace with actual logo -->
             <div class="social-icons mt-3">
-              <a href="#"><i class="bi bi-facebook"></i></a>
-              <a href="#"><i class="bi bi-youtube"></i></a>
-              <a href="#"><i class="bi bi-instagram"></i></a>
-              <a href="#"><i class="bi bi-tiktok"></i></a>
+              <a href="https://www.facebook.com/isacademyph">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/isacademyph?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              >
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a
+                href="https://www.tiktok.com/@isacademyph?is_from_webapp=1&sender_device=pc"
+              >
+                <i class="bi bi-tiktok"></i>
+              </a>
             </div>
           </div>
 
@@ -227,16 +237,13 @@
 
         <div class="divider"></div>
         <div class="text-center mt-3">
-          <p>© 2025, <a href="#">Inspire Sports Academy</a></p>
+          <p>
+            © 2025,
+            <a href="#image">Inspire Sports Academy</a>
+          </p>
         </div>
       </div>
     </footer>
-
-    <!-- BOOTSTRAP JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+    <!-- END OF FOOTER -->
   </body>
 </html>

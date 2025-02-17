@@ -11,9 +11,8 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- FOR FONTS -->
+    <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,7 +20,10 @@
       rel="stylesheet"
     />
 
-    <!-- FOR ICONS -->
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="images/logo/logo.png" type="image/x-icon" />
+
+    <!-- BOOTSTRAP ICONS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
@@ -30,19 +32,20 @@
     <!-- STYLES -->
     <link rel="stylesheet" href="css/faq.css" />
 
-    <title>Inspire Sports Academy</title>
-  </head>
+    <!-- JS -->
+    <script src="js/bootstrap.js"></script>
+    <script src="js/navbar-color-scroll.js"></script>
 
+    <title>FAQ - ISA</title>
+  </head>
   <body>
     <!-- NAVIGATION BAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top p-md-3">
+    <nav class="navbar navbar-expand-lg fixed-top p-md-3">
       <div class="container">
         <!-- ISA LOGO -->
         <a class="navbar-brand" href="index.html">
           <img
-            src="images/logo/primary-logo.png"
-            height="60"
-            width="320"
+            src="images/logo/inspire-logo.png"
             class="img-fluid"
             alt="Logo"
           />
@@ -58,7 +61,7 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <i class="bi bi-menu-button"></i>
+          <i class="bi bi-menu-button-wide"></i>
         </button>
 
         <!-- NAVBAR TABS -->
@@ -93,168 +96,192 @@
         </div>
       </div>
     </nav>
+    <!-- END OF NAVIGATION BAR -->
 
+    <!-- HEADER -->
     <section id="image" class="position-relative text-white">
-      <div class="image-overlay">
-        <div class="container">
-          <div class="row justify-content-start image-text">
-            <div class="col mt-5 py-5">
-              <h1>FAQ</h1>
-              <p>Have a Question?</p>
+      <div class="bg-image">
+        <div class="image-overlay">
+          <div class="container">
+            <div class="row justify-content-start image-text">
+              <div class="col-lg-12">
+                <h1>FAQ</h1>
+                <p>This is a template text</p>
+                <a href="index.html"
+                  ><button class="btn shadow-none back-btn">
+                    <i class="bi bi-arrow-left"></i> Go Back
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- END OF HEADER -->
 
+    <!-- FAQ -->
     <section id="faq">
-      <div class="container mt-5">
-        <div class="row">
-          <!-- Sidebar -->
-          <div class="col-md-3">
-            <div class="sidebar">
-              <div class="list-group">
-                <a
-                  class="list-group-item list-group-item-action active main-item"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#academyMenu"
-                >
-                  <i class="bi bi-person-running"></i> Sports Academy
-                </a>
-                <div class="collapse show sub-menu" id="academyMenu">
-                  <a href="#" class="list-group-item list-group-item-action"
-                    >Overview</a
-                  >
-                  <a href="#" class="list-group-item list-group-item-action"
-                    >Coaches</a
-                  >
-                </div>
+      <div class="container py-5 faq-container">
+        <div class="categories">
+          <h5><strong>Categories</strong></h5>
+          <a href="#" class="active" onclick="showFAQ('basics', this)"
+            >Basics</a
+          >
+          <a href="#" onclick="showFAQ('facilities', this)">Facilities</a>
+          <a href="#" onclick="showFAQ('academies', this)">Academies</a>
+          <a href="#" onclick="showFAQ('membership', this)">Membership</a>
+          <a href="#" onclick="showFAQ('training', this)">Training</a>
+        </div>
 
-                <a
-                  class="list-group-item list-group-item-action main-item"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#facilityMenu"
-                >
-                  <i class="bi bi-house-door"></i> Facility
-                </a>
-                <div class="collapse sub-menu" id="facilityMenu">
-                  <a href="#" class="list-group-item list-group-item-action"
-                    >Gym</a
-                  >
-                  <a href="#" class="list-group-item list-group-item-action"
-                    >Swimming Pool</a
-                  >
-                </div>
+        <div class="faq-content">
+          <h2 class="text-center">Frequently Asked Questions</h2>
 
-                <a
-                  class="list-group-item list-group-item-action main-item"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#trainingMenu"
-                >
-                  <i class="bi bi-barbell"></i> Training
-                </a>
-                <div class="collapse sub-menu" id="trainingMenu">
-                  <a href="#" class="list-group-item list-group-item-action"
-                    >Strength Training</a
-                  >
-                  <a href="#" class="list-group-item list-group-item-action"
-                    >Endurance Training</a
-                  >
-                </div>
-
-                <a
-                  class="list-group-item list-group-item-action main-item"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#eventMenu"
-                >
-                  <i class="bi bi-trophy"></i> Event
-                </a>
-                <div class="collapse sub-menu" id="eventMenu">
-                  <a href="#" class="list-group-item list-group-item-action"
-                    >Competitions</a
-                  >
-                  <a href="#" class="list-group-item list-group-item-action"
-                    >Workshops</a
-                  >
-                </div>
-
-                <a
-                  class="list-group-item list-group-item-action main-item"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#shopMenu"
-                >
-                  <i class="bi bi-cart"></i> Shop
-                </a>
-                <div class="collapse sub-menu" id="shopMenu">
-                  <a href="#" class="list-group-item list-group-item-action"
-                    >Equipment</a
-                  >
-                  <a href="#" class="list-group-item list-group-item-action"
-                    >Merchandise</a
-                  >
-                </div>
-
-                <a
-                  class="list-group-item list-group-item-action main-item"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#pricingMenu"
-                >
-                  <i class="bi bi-cash-stack"></i> Pricing Plan
-                </a>
-                <div class="collapse sub-menu" id="pricingMenu">
-                  <a href="#" class="list-group-item list-group-item-action"
-                    >Basic</a
-                  >
-                  <a href="#" class="list-group-item list-group-item-action"
-                    >Premium</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Section -->
-          <div class="col-md-9">
-            <div class="accordion" id="faqAccordion">
-              <div class="accordion-item faq-card mb-3">
-                <h2 class="accordion-header">
-                  <button
-                    class="accordion-button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#q1"
-                  >
-                    Are sports swing trainers worth it?
-                  </button>
-                </h2>
-                <div
-                  id="q1"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#faqAccordion"
-                >
-                  <div class="accordion-body">
-                    Swing trainers can be beneficial for improving form and
-                    technique.
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item faq-card mb-3">
+          <!-- Basics FAQ -->
+          <div class="faq-section active" id="basics">
+            <div class="accordion" id="faqAccordionBasics">
+              <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button
                     class="accordion-button collapsed"
+                    type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#q2"
+                    data-bs-target="#basicFaq1"
                   >
-                    How do you train for sports?
+                    What payment methods do you accept?
                   </button>
                 </h2>
-                <div
-                  id="q2"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#faqAccordion"
-                >
+                <div id="basicFaq1" class="accordion-collapse collapse">
                   <div class="accordion-body">
-                    Training involves strength, endurance, and technique drills.
+                    We accept credit cards, PayPal, and bank transfers.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Facilities FAQ -->
+          <div class="faq-section" id="facilities">
+            <div class="accordion" id="faqAccordionFacilities">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#facilitiesFaq1"
+                  >
+                    Do you have locker rooms?
+                  </button>
+                </h2>
+                <div id="facilitiesFaq1" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    Yes, locker rooms are available for all members.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Academies FAQ -->
+          <div class="faq-section" id="academies">
+            <div class="accordion" id="faqAccordionAcademies">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#academiesFaq1"
+                  >
+                    What sports academies do you offer?
+                  </button>
+                </h2>
+                <div id="academiesFaq1" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    We offer academies for football, basketball, and swimming.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Membership FAQ -->
+          <div class="faq-section" id="membership">
+            <div class="accordion" id="faqAccordionMembership">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#membershipFaq1"
+                  >
+                    How much does membership cost?
+                  </button>
+                </h2>
+                <div id="membershipFaq1" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    Membership plans start at $30 per month.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Training FAQ -->
+          <div class="faq-section" id="training">
+            <div class="accordion" id="faqAccordionTraining">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#trainingFaq1"
+                  >
+                    Do you offer personal training?
+                  </button>
+                </h2>
+                <div id="trainingFaq1" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    Yes, we offer personalized training sessions.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#trainingFaq2"
+                  >
+                    Do you offer personal training?
+                  </button>
+                </h2>
+                <div id="trainingFaq2" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    Yes, we offer personalized training sessions.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#trainingFaq3"
+                  >
+                    Do you offer personal training?
+                  </button>
+                </h2>
+                <div id="trainingFaq3" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    Yes, we offer personalized training sessions.
                   </div>
                 </div>
               </div>
@@ -263,6 +290,41 @@
         </div>
       </div>
     </section>
+    <!-- END OF FAQ -->
+
+    <!-- CONTACT US -->
+    <section id="contact">
+      <div class="mb-5 container-fluid">
+        <div class="row">
+          <div class="col-lg-6 form-container">
+            <h1 class="sub-title">Contact Us</h1>
+            <form>
+              <div class="input-group">
+                <input type="text" placeholder="First Name" required />
+                <input type="text" placeholder="Last Name" required />
+              </div>
+              <div class="input-group">
+                <input type="email" placeholder="Your Email" required />
+                <input type="tel" placeholder="Your Phone" required />
+              </div>
+              <div class="message-group">
+                <textarea placeholder="Message" required></textarea>
+              </div>
+              <button class="submit-btn" type="submit">Submit</button>
+            </form>
+          </div>
+
+          <div class="col-lg-6 contact-image">
+            <img
+              src="images/contact-bg.png"
+              alt="Academy Image"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END OF CONTACT US -->
 
     <!--FOOTER-->
     <footer class="footer">
@@ -271,16 +333,25 @@
           <!-- Logo and Social Media -->
           <div class="col-md-4 mb-4 footer-images">
             <img
-              src="images/logo/primary-logo.png"
+              src="images/logo/inspire-logo.png"
               alt="Inspire Sports Academy"
               width="180"
             />
             <!-- Replace with actual logo -->
             <div class="social-icons mt-3">
-              <a href="#"><i class="bi bi-facebook"></i></a>
-              <a href="#"><i class="bi bi-youtube"></i></a>
-              <a href="#"><i class="bi bi-instagram"></i></a>
-              <a href="#"><i class="bi bi-tiktok"></i></a>
+              <a href="https://www.facebook.com/isacademyph">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/isacademyph?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              >
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a
+                href="https://www.tiktok.com/@isacademyph?is_from_webapp=1&sender_device=pc"
+              >
+                <i class="bi bi-tiktok"></i>
+              </a>
             </div>
           </div>
 
@@ -288,11 +359,12 @@
           <div class="col-md-4 mb-4 quick-links">
             <h5 class="fw-bold">Quick Links</h5>
             <ul class="list-unstyled">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Facilities</a></li>
-              <li><a href="#">Academies</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">About</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="facilities.html">Facilities</a></li>
+              <li><a href="academies.html">Academies</a></li>
+              <li><a href="articles.html">Articles</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="about.html">About</a></li>
             </ul>
           </div>
 
@@ -309,34 +381,34 @@
 
         <div class="divider"></div>
         <div class="text-center mt-3">
-          <p>© 2025, <a href="#">Inspire Sports Academy</a></p>
+          <p>
+            © 2025,
+            <a href="#image">Inspire Sports Academy</a>
+          </p>
         </div>
       </div>
     </footer>
 
-    <!-- BOOTSTRAP JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-
     <script>
-      $(document).ready(function () {
-        $(".main-item").click(function () {
-          // Remove 'active' class from all main menu items
-          $(".main-item").removeClass("active");
-
-          // Add 'active' class to the clicked menu item
-          $(this).addClass("active");
-
-          // Slide up all sub-menus except the current one
-          $(".sub-menu").not($(this).next()).slideUp();
-
-          // Toggle the current sub-menu
-          $(this).next().slideToggle();
+      function showFAQ(sectionId, element) {
+        // Hide all FAQ sections
+        document.querySelectorAll(".faq-section").forEach((section) => {
+          section.classList.remove("active");
         });
-      });
+
+        // Show the selected section
+        document.getElementById(sectionId).classList.add("active");
+
+        // Remove active class from all category links
+        document.querySelectorAll(".categories a").forEach((link) => {
+          link.classList.remove("active");
+        });
+
+        // Add active class to clicked link
+        element.classList.add("active");
+      }
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
