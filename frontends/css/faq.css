@@ -18,6 +18,10 @@ body {
     padding: 50px 600px;
 }
 
+.navbar .container-fluid {
+    padding: 0 100px;
+}
+
 .navbar.scrolled {
     border-bottom: 1px solid #64748b;
     background-color: #122444;
@@ -37,6 +41,52 @@ body {
 .container .nav-item .nav-link:hover {
     color: #BC943B;
 }
+
+/* SERVICES DROPDOWN */
+.nav-item.dropdown .nav-link {
+    color: #f1f5f9;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-item.dropdown .nav-link:hover {
+    color: #BC943B;
+}
+
+.dropdown-menu {
+    background-color: #122444;
+    padding: 10px 0;
+    min-width: 180px;
+}
+
+.dropdown-menu .dropdown-item {
+    color: #f1f5f9;
+    font-weight: bold;
+    padding: 10px 20px;
+
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: transparent;
+    color: #BC943B;
+}
+
+/* Align dropdown properly */
+.navbar .dropdown-menu {
+    margin-top: 10px;
+}
+
+/* Add subtle shadow for better visibility */
+.dropdown-menu {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.nav-item.dropdown i {
+    font-size: 20px;
+}
+
+
+
 
 .custom-toggler {
     border: none;
@@ -67,7 +117,7 @@ body {
     border: none !important;
 }
 
-/* NAVBAR QUOTE BTN DESIGN */
+/* QUOTE BTN DESIGN */
 .quote-btn {
     --color: #f1f5f9;
     padding: 0.8em 1.2em;

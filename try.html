@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion Notifications</title>
+    <style>
+      /* NOTIF */
+      .notif-container {
+        width: 100%;
+        background-color: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 10px;
+      }
+
+      .notif-header {
+        cursor: pointer;
+        padding: 10px;
+        background-color: #f8f8f8;
+        border-radius: 10px;
+      }
+
+      .notif-header h3 {
+        margin: 0;
+        font-size: 18px;
+      }
+
+      .message-accept h3 {
+        color: green;
+      }
+
+      .message-deny h3 {
+        color: red;
+      }
+
+      .notif-content {
+        display: none;
+        padding: 10px 0;
+        transition: max-height 0.3s ease-out;
+      }
+
+      .notif-content p {
+        font-size: 16px;
+        margin: 0 0 10px 0;
+      }
+
+      /* PAYMENT BTN */
+      .payment-btn {
+        --color: #064e3b;
+        font-size: 14px;
+        padding: 0.5em 1em;
+        border-radius: 999px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        transition: 0.5s;
+        font-weight: bold;
+        border: 2px solid #064e3b;
+        background-color: transparent;
+        color: var(--color);
+        z-index: 1;
+      }
+
+      .payment-btn::before,
+      .payment-btn::after {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 50px;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        border-radius: 50%;
+        z-index: -1;
+        background-color: #064e3b;
+        transition: 0.8s ease;
+      }
+
+      .payment-btn::before {
+        top: -1em;
+        left: -1em;
+      }
+
+      .payment-btn::after {
+        left: calc(100% + 1em);
+        top: calc(100% + 1em);
+      }
+
+      .payment-btn:hover::before,
+      .payment-btn:hover::after {
+        height: 410px;
+        width: 410px;
+      }
+
+      .payment-btn:hover {
+        color: #f1f5f9;
+      }
+
+      .payment-btn:active {
+        filter: brightness(1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content" id="notification">
+      <h1>Notifications</h1>
+      <p>View your notifications here.</p>
+      <hr
+        style="border: 1px solid #64748b; opacity: 1; width: 100%; margin: auto"
+      />
+
+      <!-- APPROVED -->
+      <div class="notif-container">
+        <div
+          class="notif-header message-accept"
+          onclick="toggleAccordion(this)"
+        >
+          <h3>Request Approved!</h3>
+        </div>
+        <div class="notif-content">
+          <p>Your request for quotation has been approved.</p>
+          <button class="payment-btn">Proceed to payment</button>
+        </div>
+      </div>
+
+      <!-- VERIFIED -->
+      <div class="notif-container">
+        <div
+          class="notif-header message-accept"
+          onclick="toggleAccordion(this)"
+        >
+          <h3>Payment Verified Successfully!</h3>
+        </div>
+        <div class="notif-content">
+          <p>Your payment has been verified and your schedule is now set.</p>
+          <button class="payment-btn">Download Payment Receipt</button>
+        </div>
+      </div>
+
+      <!-- DENIED -->
+      <div class="notif-container">
+        <div class="notif-header message-deny" onclick="toggleAccordion(this)">
+          <h3>Request Denied!</h3>
+        </div>
+        <div class="notif-content">
+          <p>
+            Your request for quotation has been denied due to a same-date
+            conflict.
+          </p>
+          <button class="payment-btn">Request again</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleAccordion(element) {
+        const content = element.nextElementSibling;
+        content.style.display =
+          content.style.display === "block" ? "none" : "block";
+      }
+    </script>
+  </body>
+</html>
