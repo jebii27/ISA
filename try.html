@@ -3,162 +3,243 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Accordion Notifications</title>
+    <title>Quotation</title>
     <style>
-      /* NOTIF */
-      .notif-container {
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        width: 8.5in;
+        height: 11in;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 5px;
+        line-height: 25px;
+      }
+      .header img {
+        width: 180px;
+      }
+      .company-details {
+        text-align: right;
+        font-size: 12px;
+      }
+      .info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        font-size: 12px;
+      }
+      .info-left {
+        width: 50%;
+        line-height: 10px;
+      }
+      .info-right {
+        width: 50%;
+        line-height: 10px;
+        .info p {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+        }
+        .info span {
+          display: inline-block;
+          width: 180px;
+          border-bottom: 1px solid black;
+        }
+      }
+      .line {
+        border-top: 4px solid black;
+        margin-top: 10px;
+      }
+      .quotation-table {
         width: 100%;
-        background-color: white;
-        padding: 15px;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        margin-bottom: 10px;
+        border-collapse: collapse;
+        margin-top: 10px;
+        font-size: 12px;
       }
-
-      .notif-header {
-        cursor: pointer;
-        padding: 10px;
-        background-color: #f8f8f8;
-        border-radius: 10px;
+      .quotation-table th {
+        background-color: #d3d3d3;
+        padding: 6px;
+        border: 1px solid black;
+        text-align: center;
       }
-
-      .notif-header h3 {
-        margin: 0;
-        font-size: 18px;
+      .quotation-table td {
+        padding: 5px;
+        border: 1px solid black;
+        text-align: center;
       }
-
-      .message-accept h3 {
-        color: green;
-      }
-
-      .message-deny h3 {
-        color: red;
-      }
-
-      .notif-content {
-        display: none;
-        padding: 10px 0;
-        transition: max-height 0.3s ease-out;
-      }
-
-      .notif-content p {
-        font-size: 16px;
-        margin: 0 0 10px 0;
-      }
-
-      /* PAYMENT BTN */
-      .payment-btn {
-        --color: #064e3b;
+      .quotation-header {
+        background-color: #034892;
+        color: white;
         font-size: 14px;
-        padding: 0.5em 1em;
-        border-radius: 999px;
-        position: relative;
-        overflow: hidden;
-        cursor: pointer;
-        transition: 0.5s;
         font-weight: bold;
-        border: 2px solid #064e3b;
-        background-color: transparent;
-        color: var(--color);
-        z-index: 1;
+        text-align: center;
+        padding: 6px;
       }
-
-      .payment-btn::before,
-      .payment-btn::after {
-        content: "";
-        display: block;
-        width: 50px;
-        height: 50px;
-        transform: translate(-50%, -50%);
-        position: absolute;
-        border-radius: 50%;
-        z-index: -1;
-        background-color: #064e3b;
-        transition: 0.8s ease;
+      .terms-section {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
       }
-
-      .payment-btn::before {
-        top: -1em;
-        left: -1em;
+      .terms {
+        width: 60%;
+        font-size: 12px;
       }
-
-      .payment-btn::after {
-        left: calc(100% + 1em);
-        top: calc(100% + 1em);
+      .subtotal-box {
+        width: 40%;
+        border: 1px solid black;
+        font-size: 12px;
       }
-
-      .payment-btn:hover::before,
-      .payment-btn:hover::after {
-        height: 410px;
-        width: 410px;
+      .approval-section {
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        margin-top: 20px;
+        font-size: 12px;
       }
-
-      .payment-btn:hover {
-        color: #f1f5f9;
-      }
-
-      .payment-btn:active {
-        filter: brightness(1);
+      .approval-section div {
+        width: 30%;
       }
     </style>
   </head>
   <body>
-    <div class="content" id="notification">
-      <h1>Notifications</h1>
-      <p>View your notifications here.</p>
-      <hr
-        style="border: 1px solid #64748b; opacity: 1; width: 100%; margin: auto"
-      />
-
-      <!-- APPROVED -->
-      <div class="notif-container">
-        <div
-          class="notif-header message-accept"
-          onclick="toggleAccordion(this)"
-        >
-          <h3>Request Approved!</h3>
-        </div>
-        <div class="notif-content">
-          <p>Your request for quotation has been approved.</p>
-          <button class="payment-btn">Proceed to payment</button>
-        </div>
-      </div>
-
-      <!-- VERIFIED -->
-      <div class="notif-container">
-        <div
-          class="notif-header message-accept"
-          onclick="toggleAccordion(this)"
-        >
-          <h3>Payment Verified Successfully!</h3>
-        </div>
-        <div class="notif-content">
-          <p>Your payment has been verified and your schedule is now set.</p>
-          <button class="payment-btn">Download Payment Receipt</button>
-        </div>
-      </div>
-
-      <!-- DENIED -->
-      <div class="notif-container">
-        <div class="notif-header message-deny" onclick="toggleAccordion(this)">
-          <h3>Request Denied!</h3>
-        </div>
-        <div class="notif-content">
-          <p>
-            Your request for quotation has been denied due to a same-date
-            conflict.
-          </p>
-          <button class="payment-btn">Request again</button>
-        </div>
+    <div class="header">
+      <img src="inspire-logo.png" alt="INSPIRE Sports Academy" />
+      <div class="company-details">
+        <strong>NU SPORTS ACADEMY, INC.</strong><br />
+        NU Laguna, KM 53 Pan Philippine Highway<br />
+        Brgy. Milagrosa, Calamba City 4027<br />
+        NON-VAT: 009-697-538-000<br />
+        <strong>Email:</strong> jdperez@inspire-sportsacademy.com
+        <strong>Phone:</strong> 0939-986-4897<br />
+        <strong>Website:</strong> www.inspiresportsacademy.ph
       </div>
     </div>
 
-    <script>
-      function toggleAccordion(element) {
-        const content = element.nextElementSibling;
-        content.style.display =
-          content.style.display === "block" ? "none" : "block";
-      }
-    </script>
+    <div class="line"></div>
+
+    <div class="info">
+      <div class="info-left">
+        <p><strong>Bill to:</strong></p>
+        <p><strong>Address & TIN No.:</strong></p>
+        <p><strong>Event Date & Title:</strong></p>
+        <p><strong>Event Time:</strong></p>
+      </div>
+      <div class="info-right">
+        <p><strong>Quotation No.:</strong></p>
+        <p><strong>Quotation Date:</strong></p>
+        <p><strong>Quote Validity:</strong></p>
+      </div>
+    </div>
+
+    <table class="quotation-table">
+      <tr>
+        <td colspan="5" class="quotation-header">QUOTATION</td>
+      </tr>
+      <tr>
+        <th>FACILITIES</th>
+        <th>DESCRIPTION</th>
+        <th>HOURS/QTY</th>
+        <th>UNIT PRICE</th>
+        <th>AMOUNT</th>
+      </tr>
+      <tr>
+        <td>ISA Hoops Center (With Lights and No - Air Condition)</td>
+        <td>1 Basketball Court (Court #2)</td>
+        <td>2 Hours</td>
+        <td>₱2,400.00</td>
+        <td>₱4,800.00</td>
+      </tr>
+      <tr>
+        <td colspan="4" style="text-align: right"><strong>Subtotal</strong></td>
+        <td><strong>₱4,800.00</strong></td>
+      </tr>
+    </table>
+
+    <p><em>* The first 150 spectators will be admitted free of charge.</em></p>
+    <p>
+      <em
+        >** For any additional attendees beyond 150, there will be a 50 pesos
+        per head admission fee.</em
+      >
+    </p>
+
+    <div class="terms-section">
+      <div class="terms">
+        <h3>Terms & Conditions</h3>
+        <ol>
+          <li>
+            The deposit is required to confirm the reservation (50%
+            non-refundable).
+          </li>
+          <li>
+            Accepted payment methods: credit/debit cards, bank transfers, cash.
+          </li>
+          <li>Remaining 50% balance due 7 days after final billing.</li>
+          <li>
+            Payment to <strong>NU SPORTS ACADEMY, INC.</strong>:<br />
+            Account No: 0509-1801-9654<br />
+            Account Name: NU Sports Academy, Inc.<br />
+            Bank: BDO Unibank, Inc.
+          </li>
+          <li>All fees subject to change based on actual usage.</li>
+          <li>
+            Send proof of payment to
+            <strong>jdperez@inspire-sportsacademy.com</strong>.
+          </li>
+          <li>
+            Late payments incur 3% monthly interest starting the day after due
+            date.
+          </li>
+          <li>
+            Cancellation less than 7 days before event: 25% downpayment fee.
+          </li>
+          <li>Cancellation within 24 hours: 25% downpayment fee.</li>
+          <li>
+            Re-booking allowed if notified at least 7 days before original date.
+          </li>
+        </ol>
+      </div>
+
+      <div class="subtotal-box">
+        <p><strong>Subtotal:</strong> ₱4,800.00</p>
+        <p><strong>Discount for Facilities (10%):</strong> ₱480.00</p>
+        <p><strong>Sales Tax:</strong> ₱ -</p>
+        <p><strong>Penalty:</strong> ₱ -</p>
+        <p><strong>Cancellation Fee:</strong> ₱ -</p>
+        <p style="background-color: #034892; color: white; padding: 3px">
+          <strong>Total Amount:</strong> ₱4,320.00
+        </p>
+        <p><strong>Amount Paid:</strong> ₱ -</p>
+        <p><strong>Balance Due:</strong> ₱ -</p>
+      </div>
+    </div>
+
+    <div class="approval-section">
+      <div>
+        <p><strong>Proposed by:</strong></p>
+        <br />
+        <p>JHANICA D. PEREZ</p>
+        <p>Sales Associate II</p>
+      </div>
+      <div>
+        <p><strong>Recommending Approval:</strong></p>
+        <br />
+        <p>JACQUELINE B. TE</p>
+        <p>Accounting Supervisor</p>
+        <br />
+        <p><strong>CONFORME:</strong></p>
+        <p>Name & Signature of Client Representative</p>
+        <p>Date:</p>
+      </div>
+      <div>
+        <p><strong>Approved by:</strong></p>
+        <br />
+        <p>BENJAMIN F. UICHICO</p>
+        <p>Managing Director</p>
+      </div>
+    </div>
   </body>
 </html>

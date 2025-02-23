@@ -70,11 +70,26 @@
           id="navbarNav"
         >
           <ul class="navbar-nav d-flex align-items-center gap-5">
-            <li class="nav-item">
-              <a class="nav-link" href="facilities.html">Facilities</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="academies.html">Academies</a>
+            <!-- SERVICES DROPDOWN -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="servicesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Services
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                <li>
+                  <a class="dropdown-item" href="facilities.html">Facilities</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="academies.html">Academies</a>
+                </li>
+              </ul>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="articles.html">Articles</a>
@@ -85,6 +100,32 @@
             <li class="nav-item">
               <a class="nav-link" href="about.html">About</a>
             </li>
+
+            <!-- USER ICON DROPDOWN -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle d-flex align-items-center"
+                href="#"
+                id="userDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-person"></i>
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="userDropdown"
+              >
+                <li><a class="dropdown-item" href="signin.html">Log In</a></li>
+                <li>
+                  <a class="dropdown-item" href="signup.html"
+                    >Create an Account</a
+                  >
+                </li>
+              </ul>
+            </li>
+
             <a
               href="quote-page.html"
               class="btn shadow-none quote-btn"
@@ -96,7 +137,6 @@
         </div>
       </div>
     </nav>
-    <!-- END OF NAVIGATION BAR -->
 
     <!-- HEADER -->
     <section id="image" class="position-relative text-white">
